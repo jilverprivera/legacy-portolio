@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    jilverpacheco.vercel.app
+</h1>
 
-## Getting Started
+## About 🧾
 
-First, run the development server:
+This is my personal website where you can find information about my professional skills and experience, my recents projects and much more information about me.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+[View demo 🚀](https://jilverpacheco.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Technologies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Next.js
+2. Styled Components
+3. Framer motion
+4. Vercel
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🎨 Color Reference
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Type       | Light     | Dark      |
+| ---------- | --------- | --------- |
+| Background | `#EFF1F5` | `#202024` |
+| Text       | `#1D1D1D` | `#F3F2F4` |
+| Primary    | `#A7C5EB` | `#A7C5EB` |
+| Secondary  | `#949CDF` | `#5429CF` |
+| Tertiary   | `#a8b2d1` | `#a8b2d1` |
 
-## Learn More
+## 👀 Instalation
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone my project.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```
+    git clone https://github.com/jilverprivera/jilverpacheco.vercel.app.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```
 
-## Deploy on Vercel
+2.  **Install dependencies**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Navigate to the folder path in your terminal and install the dependecies, if you're using NPM use:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```
+    npm install
+    ```
+
+    Or, if you're using YARN then use:
+
+    ```
+    yarn
+    ```
+
+3.  **Run project web app.**
+
+    It depends by your packages installer, use:
+
+    ```
+    npm run dev
+    ```
+
+    ```
+    yarn dev
+    ```
+
+
+4.  **Enjoy ✌**
+
+    If you want to copy or build on this project, of course you can do it but with a little attribution, I spent many hours making this UI design and the only thing I hope is that you do not attribute the code as your own, for everything else, feel free to make changes and improvements to it.
