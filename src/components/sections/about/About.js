@@ -23,13 +23,13 @@ const About = () => {
                         margin="0rem  0rem 5rem 0rem"
                         large
                     >
-                        Hey!, nice to meet you, I am a
-                        <strong> Frontend Developer </strong>specialized in
+                        Hey!, nice to meet you, I am a&nbsp;
+                        <strong>Frontend Developer</strong>&nbsp;specialized in
                         the design of minimalist interfaces and innovative
                         products focused on user experience, however, over time
                         I have been exploring new paths such as Backend and
-                        Mobile Development, I am also an
-                        <strong> Electronics Engineer </strong>which allows
+                        Mobile Development, I am also an&nbsp;
+                        <strong>Electronics Engineer</strong>&nbsp;which allows
                         me to join my skills in electronics with the fascinating
                         world of the web.
                     </Paragraph>

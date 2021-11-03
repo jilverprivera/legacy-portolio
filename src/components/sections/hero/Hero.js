@@ -12,7 +12,7 @@ const Hero = () => {
                     Hey!
                 </Paragraph>
                 <AuthorName fontSize={SIZES.largeTitle}>
-                    I'm Jilver Pacheco
+                    I&apos;m Jilver Pacheco
                 </AuthorName>
                 <div
                     style={{
@@ -21,8 +21,8 @@ const Hero = () => {
                         alignItems: "center",
                     }}
                 >
-                    <Paragraph extraLarge fontWeight="500" margin="0rem 0.5rem 0rem 0rem">
-                        I'm a
+                    <Paragraph extraLarge fontWeight="500">
+                        I'm a&nbsp;
                     </Paragraph>
                     <Paragraph extraLarge fontWeight="500">
                         <Typewriter
