@@ -4,7 +4,6 @@ import { NavLink } from "../styles/layout.style";
 export const SmoothLink = ({ route, name }) => {
     return (
         <NavLink
-            style={{ margin: "0px 10px" }}
             activeClass="active"
             to={route}
             spy={true}

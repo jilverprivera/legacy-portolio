@@ -33,7 +33,7 @@ const Header = () => {
                     <h1>Jilver pacheco</h1>
                     <NavListWrapper>
                         <SmoothLink name="Home" route="home" />
-                        <SmoothLink name="About me" route="about" />
+                        <SmoothLink name="About" route="about" />
                         <SmoothLink name="Portfolio" route="portfolio" />
                         <SmoothLink name="Contact" route="contact" />
                         <ThemeToggler />

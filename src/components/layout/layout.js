@@ -8,6 +8,7 @@ import Header from "./header";
 import { dark, light } from "../../theme";
 import { GlobalStyle } from "../../constants";
 import { AppContext } from "../../context/AppContext";
+import { Main } from "../../styles/layout.style";
 
 const Layout = ({ children }) => {
     const {
@@ -30,7 +31,7 @@ const Layout = ({ children }) => {
             <ThemeProvider theme={darkMode ? dark : light}>
                 <GlobalStyle />
                 <Header />
-                <main>{children}</main>
+                <Main>{children}</Main>
             </ThemeProvider>
         </>
     );
