@@ -1,12 +1,12 @@
 export const SIZES = {
-    body1: "25px",
-    body2: "22px",
-    body3: "16px",
-    body4: "14px",
-    body5: "12px",
+    body1: "2.5rem",
+    body2: "2.2rem",
+    body3: "1.6rem",
+    body4: "1.4rem",
+    body5: "1.2rem",
 
-    largeTitle: "70px",
-    title: "50px",
-    title2: "40px",
-    title3: "25px",
+    largeTitle: "7rem",
+    title: "5rem",
+    title2: "4rem",
+    title3: "2.5rem",
 };

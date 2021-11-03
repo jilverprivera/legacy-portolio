@@ -3,12 +3,13 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
+        font-size: 62.5%
     }
     *,
     *:before,
     *:after {
-        margin: 0px;
-        padding: 0px;
+        margin: 0rem;
+        padding: 0rem;
         box-sizing: inherit;
         font-family: 'Fira Sans', sans-serif;
     }
@@ -17,14 +18,14 @@ export const GlobalStyle = createGlobalStyle`
         transition: background-color 0.4s;
     }
     body::-webkit-scrollbar {
-        width: 15px;
-        height: 0px;
+        width: 1.2rem;
+        height: 0rem;
     }
     body::-webkit-scrollbar-track {
         background-color: #fff;
     }
     body::-webkit-scrollbar-thumb {
-        border-radius: 5px;
+        border-radius: 0.5rem;
         background-color: #000;
     }
     .active{
