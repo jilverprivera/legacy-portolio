@@ -21,8 +21,8 @@ const Hero = () => {
                         alignItems: "center",
                     }}
                 >
-                    <Paragraph extraLarge fontWeight="500">
-                        I'm a&nbsp;
+                    <Paragraph extraLarge fontWeight="500" margin="0rem 0.5rem 0rem 0rem">
+                        I'm a
                     </Paragraph>
                     <Paragraph extraLarge fontWeight="500">
                         <Typewriter
