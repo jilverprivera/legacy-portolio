@@ -22,7 +22,7 @@ const Hero = () => {
                     }}
                 >
                     <Paragraph extraLarge fontWeight="500">
-                        I'm a&nbsp;
+                        I&apos;m a&nbsp;
                     </Paragraph>
                     <Paragraph extraLarge fontWeight="500">
                         <Typewriter
