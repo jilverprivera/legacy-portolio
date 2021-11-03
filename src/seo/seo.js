@@ -5,15 +5,15 @@ import { Helmet } from "react-helmet";
 const Seo = ({ description, lang, meta, title }) => {
     const metaDescription =
         description ||
-        `Jilver Pacheco's personal website, a electronic engineer and web developer passionate about learning things every day.`;
+        `Jilver Pacheco's personal website, a electronic engineer and frontend developer passionate about learning things every day.`;
 
     return (
         <Helmet
             htmlAttributes={{
                 lang,
             }}
-            title={"Jilver Pacheco — Web Developer / Electronic Engineer"}
-            titleTemplate={`Jilver Pacheco — Web Developer / Electronic Engineer`}
+            title={title}
+            titleTemplate={title}
             meta={[
                 {
                     name: `description`,
