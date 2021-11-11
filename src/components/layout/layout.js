@@ -12,6 +12,7 @@ import { GlobalStyle } from "../../constants";
 import { AppContext } from "../../context/AppContext";
 import { Main } from "../../styles/layout.style";
 import { AnimatePresence } from "framer-motion";
+import SocialNetworks from "../socialNetworks";
 
 const Layout = ({ children }) => {
     const { pathname } = useRouter();
@@ -41,6 +42,7 @@ const Layout = ({ children }) => {
             <ThemeProvider theme={darkMode ? dark : light}>
                 <GlobalStyle />
                 <Header pathname={pathname} />
+                <SocialNetworks/>
                 <Main>{children}</Main>
             </ThemeProvider>
         </>
