@@ -16,7 +16,7 @@ const Contact = () => {
         <Container id="contact">
             <WrapperGrid columnWidth="55.5rem">
                 <MessageContent>
-                    <SectionTitle>Let's Talk 🖐</SectionTitle>
+                    <SectionTitle>Let&apos;s Talk 🖐</SectionTitle>
                     <Paragraph
                         large
                         lineHeight="2.5rem"

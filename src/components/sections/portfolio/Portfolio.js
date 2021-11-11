@@ -9,7 +9,7 @@ const Portfolio = () => {
     return (
         <Container id="portfolio" padding="6rem 0rem">
             <WrapperFlex>
-                <SectionTitle center>Some things I've built</SectionTitle>
+                <SectionTitle center>Some things I&apos;ve built</SectionTitle>
                 <FeaturedProjects />
                 <DevelopmentStages />
             </WrapperFlex>
