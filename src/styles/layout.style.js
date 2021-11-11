@@ -1,9 +1,10 @@
 import { Link } from "react-scroll";
-import styled from "styled-components";
+import { motion } from "framer-motion";
+import styled, {css} from "styled-components";
 import { SIZES } from "../constants";
 
 // <----------------------------- HEADER ----------------------------->
-export const HeaderWrapper = styled.header`
+export const HeaderWrapper = styled(motion.header)`
     position: fixed;
     top: 0rem;
     left: 0rem;
@@ -47,6 +48,15 @@ export const NavListWrapper = styled.div`
     align-items: center;
 `;
 
+export const NavList = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media (max-width: 76.8rem) {
+        display: none;
+    }
+`;
+
 export const NavLink = styled(Link)`
     text-decoration: none;
     margin: 0rem 1rem;
@@ -55,6 +65,13 @@ export const NavLink = styled(Link)`
     &:hover {
         cursor: pointer;
     }
+
+    ${({ drawerType }) =>
+        drawerType &&
+        css`
+            font-size: ${SIZES.body2};
+            margin: 1rem;
+        `}
 `;
 
 export const ThemeSwitch = styled.div`
@@ -84,9 +101,61 @@ export const ThemeSwitch = styled.div`
     }
 `;
 
+export const DrawerIcon = styled.div`
+@media(min-width: 76.8rem){
+     display: none;
+}
+    width: 3rem;
+    height: ${(props) => (props.open ? "0rem" : "0.4rem")};
+    border-radius: 0.5rem;
+    background-color: ${(props) => props.theme.text};
+    margin-left: 1rem;
+    transition: 0.2s;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 3rem;
+        height: 0.4rem;
+        border-radius: 0.5rem;
+        background-color: ${(props) => props.theme.text};
+        transform: ${(props) =>
+            props.open
+                ? "translateY(0rem) rotate(45deg)"
+                : "translateY(1rem);"};
+        transition: 0.4s;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 3rem;
+        height: 0.4rem;
+        border-radius: 0.5rem;
+        background-color: ${(props) => props.theme.text};
+        transform: ${(props) =>
+            props.open
+                ? "translateY(0rem) rotate(-45deg)"
+                : "translateY(-1rem);"};
+        transition: 0.4s;
+    }
+`;
+
+export const DrawerContent = styled(motion.div)`
+    position: absolute;
+    background-color: ${(props) => props.theme.background};
+    top: 6rem;
+    left: 0rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`;
+
 // <----------------------------- MAIN ----------------------------->
 
-export const Main = styled.main`
+export const Main = styled(motion.main)`
     width: 100%;
     margin: 0rem auto;
 `;

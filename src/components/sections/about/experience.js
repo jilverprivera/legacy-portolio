@@ -19,9 +19,9 @@ export const Experience = () => {
                             {data.position} - {data.company} ({data.start_date}-
                             {data.end_date})
                         </Paragraph>
-                        <Paragraph fontSize={SIZES.body5}></Paragraph>
+                        <Paragraph large fontSize={SIZES.body5}></Paragraph>
                         {data.task.map((task, index) => (
-                            <Paragraph small key={task.id}>
+                            <Paragraph large key={task.id}>
                                 {index + 1}. {task.description}
                             </Paragraph>
                         ))}

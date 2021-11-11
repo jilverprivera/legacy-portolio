@@ -11,8 +11,8 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0rem;
         padding: 0rem;
         box-sizing: inherit;
-        font-family: 'Fira Sans', sans-serif;
-    }
+        font-family: 'Raleway', sans-serif;
+     }
     body {
         background-color: ${(props) => props.theme.background};
         transition: background-color 0.4s;

@@ -8,7 +8,7 @@ export const Paragraph = styled.p`
     text-align: ${(props) => props.textAlign};
     line-height: ${(props) => props.lineHeight};
     letter-spacing: ${(props) => props.letterSpacing};
-    @media (max-width: 768px) {
+    @media (max-width: 76.8rem) {
         text-align: ${(props) => props.responsiveAlign};
     }
 
@@ -33,6 +33,12 @@ export const Paragraph = styled.p`
         css`
             font-size: ${SIZES.body2};
         `}
+        
+        ${({ upperCase }) =>
+        upperCase &&
+        css`
+            text-transform: uppercase;
+        `}
 `;
 
 export const AuthorName = styled.h1`
@@ -48,21 +54,69 @@ export const AuthorName = styled.h1`
     }
 `;
 
-export const SectionTitle = styled.h2`
-    text-align: center;
-    font-size: 30px;
+export const Title = styled.h2`
+    font-size: ${SIZES.title2};
     position: relative;
-    margin: 20px auto;
+    margin-bottom: 5rem;
+    font-weight: 700;
+    color: ${(props) => props.theme.text};
     z-index: 1;
-    &:before {
-        content: "${(props) => props.afterText}";
-        font-size: 50px;
-        text-transform: uppercase;
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translate(-50%, -20%);
-        color: #ddd;
-        z-index: -1;
+`;
+
+export const SectionTitle = styled.h2`
+    font-size: ${SIZES.title2};
+    position: relative;
+    margin-bottom: 5rem;
+    font-weight: 700;
+    color: ${(props) => props.theme.text};
+    z-index: 1;
+    margin-left: 7rem;
+    //     border: 1px solid #000;
+    //     width: 100%;
+//     &:before {
+//         content: " ";
+//         width: 7rem;
+//         height: 0.5rem;
+//         font-size: 7rem;
+//         position: absolute;
+//         top: 50%;
+//         left: 0%;
+//         background-color: #ddd;
+//         transform: translate(-110%, -50%);
+//         color: #ddd;
+//         z-index: -1;
+//     }
+
+//     &:after {
+//         content: " ";
+//         width: 20rem;
+//         height: 0.5rem;
+//         font-size: 7rem;
+//         position: absolute;
+//         top: 50%;
+//         right: 0%;
+//         background-color: #ddd;
+//         transform: translate(110%, -50%);
+//         color: #ddd;
+//         z-index: -1;
+//     }
+    @media (max-width: 76.8rem) {
+        text-align: center;
     }
+
+    ${({ left }) =>
+        left &&
+        css`
+            text-align: left;
+        `}
+    ${({ center }) =>
+        center &&
+        css`
+            text-align: center;
+        `}
+     ${({ right }) =>
+        right &&
+        css`
+            text-align: right;
+        `}
 `;

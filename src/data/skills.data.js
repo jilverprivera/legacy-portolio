@@ -1,22 +1,3 @@
-import StyledComponents from "../../src/images/logos/styled-components.svg";
-import Sass from "../../src/images/logos/sass-1.svg";
-import JavaScript from "../../src/images/logos/logo-javascript.svg";
-import TypeScript from "../../src/images/logos/typescript.svg";
-import ReactJS from "../../src/images/logos/react.svg";
-import Redux from "../../src/images/logos/redux.svg";
-import NextJS from "../../src/images/logos/next-js.svg";
-import GatsbyJS from "../../src/images/logos/gatsby.svg";
-
-import NodeJS from "../../src/images/logos/nodejs.svg";
-import ExpressJS from "../../src/images/logos/express.svg";
-import MongoDB from "../../src/images/logos/mongodb.svg";
-import Firebase from "../../src/images/logos/firebase-1.svg";
-
-import ReactNative from "../../src/images/logos/react-native-1.svg";
-
-import Jest from "../../src/images/logos/jest-0.svg";
-import Strapi from "../../src/images/logos/strapi-2.svg";
-import Figma from "../../src/images/logos/figma-1.svg";
 
 import { GoBrowser, GoTerminal, GoDeviceMobile } from "react-icons/go";
 import { FaTools } from "react-icons/fa";
@@ -24,113 +5,102 @@ import { FaTools } from "react-icons/fa";
 export const SkillData = [
     {
         id: 1,
-        name: "Frontend Development",
+        title: "Frontend Development",
+        background: "#ffd43c",
         icon: <GoBrowser />,
         skills: [
             {
                 id: 1,
-                tag: "Styled Components",
-                icon: (
-                    <StyledComponents
-                        style={{ width: "25px", height: "25px" }}
-                    />
-                ),
+                name: "Styled Components",
             },
             {
                 id: 2,
-                tag: "Sass",
-                icon: <Sass style={{ width: "25px", height: "25px" }} />,
+                name: "Sass",
             },
             {
                 id: 3,
-                tag: "JavaScript",
-                icon: <JavaScript style={{ width: "25px", height: "25px" }} />,
+                name: "JavaScript",
             },
             {
                 id: 4,
-                tag: "TypeScript",
-                icon: <TypeScript style={{ width: "25px", height: "25px" }} />,
+                name: "TypeScript",
             },
             {
                 id: 5,
-                tag: "React.JS",
-                icon: <ReactJS style={{ width: "25px", height: "25px" }} />,
+                name: "React.JS",
             },
             {
                 id: 6,
-                tag: "Redux",
-                icon: <Redux style={{ width: "25px", height: "25px" }} />,
+                name: "Redux",
             },
             {
                 id: 7,
-                tag: "Next.JS",
-                icon: <NextJS style={{ width: "25px", height: "25px" }} />,
+                name: "Next.JS",
             },
             {
                 id: 8,
-                tag: "Gatsby.JS",
-                icon: <GatsbyJS style={{ width: "25px", height: "25px" }} />,
+                name: "Gatsby.JS",
             },
         ],
     },
     {
         id: 2,
-        name: "Backend Development",
+        title: "Backend Development",
+        background: "#67ce67",
         icon: <GoTerminal />,
         skills: [
             {
                 id: 1,
-                tag: "Node.JS",
-                icon: <NodeJS style={{ width: "25px", height: "25px" }} />,
+                name: "Node.JS",
             },
             {
                 id: 2,
-                tag: "Express.JS",
-                icon: <ExpressJS style={{ width: "25px", height: "25px" }} />,
+                name: "Express.JS",
             },
             {
                 id: 3,
-                tag: "MongoDB",
-                icon: <MongoDB style={{ width: "25px", height: "25px" }} />,
+                name: "MongoDB",
             },
             {
                 id: 4,
-                tag: "Firebase",
-                icon: <Firebase style={{ width: "25px", height: "25px" }} />,
+                name: "Firebase",
             },
         ],
     },
     {
         id: 3,
-        name: "Mobile Development",
+        title: "Mobile Development",
+        background: "#2FAACB",
+
         icon: <GoDeviceMobile />,
         skills: [
             {
                 id: 1,
-                tag: "React Native CLI",
-                icon: <ReactNative style={{ width: "25px", height: "25px" }} />,
+                name: "React Native CLI",
             },
         ],
     },
     {
         id: 4,
-        name: "Tools",
+        title: "Testing & Tools",
+        background: "#41BDAF",
         icon: <FaTools />,
         skills: [
             {
                 id: 1,
-                tag: "Jest",
-                icon: <Jest style={{ width: "25px", height: "25px" }} />,
+                name: "Jest",
             },
             {
                 id: 2,
-                tag: "Strapi CMS",
-                icon: <Strapi style={{ width: "25px", height: "25px" }} />,
+                name: "React Testing Library",
             },
             {
                 id: 3,
-                tag: "Figma",
-                icon: <Figma style={{ width: "25px", height: "25px" }} />,
+                name: "Strapi CMS",
+            },
+            {
+                id: 4,
+                name: "Figma",
             },
         ],
     },

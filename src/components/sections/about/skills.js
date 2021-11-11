@@ -1,12 +1,16 @@
 import React from "react";
-import { Paragraph } from "../../../styles/typography";
+import { RiArrowDropDownFill } from "react-icons/ri";
 import { SkillData } from "../../../data";
-import { SIZES } from "../../../constants";
 import {
     SkillCard,
     SkillIcon,
-    SkillsIconWrapper,
     ProfessionalWrapper,
+    SkillWrapper,
+    SkillTitleWrapper,
+    SkillTitle,
+    TitleIcon,
+    SkillContent,
+    SkillText,
 } from "../../../styles/about.style";
 
 export const Skills = () => {
@@ -17,22 +21,26 @@ export const Skills = () => {
             exit={{ opacity: 1, y: 20 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
         >
-            {SkillData.map((data) => (
-                <SkillCard key={data.id}>
-                    <Paragraph fontSize={SIZES.body3} textAlign="left" large>
-                        <span>{data.icon}</span>
-                        {data.name}
-                    </Paragraph>
-                    <SkillsIconWrapper>
-                        {data.skills.map((skill) => (
-                            <SkillIcon key={skill.id}>
-                                <span>{skill.icon}</span>
-                                <span className="skill__tag">{skill.tag}</span>
-                            </SkillIcon>
-                        ))}
-                    </SkillsIconWrapper>
-                </SkillCard>
-            ))}
+            <SkillWrapper>
+                {SkillData.map((data) => (
+                    <SkillCard key={data.id}>
+                        <SkillTitleWrapper background={data.background}>
+                            <SkillIcon>{data.icon}</SkillIcon>
+                            <SkillTitle>{data.title}</SkillTitle>
+                            <TitleIcon background={data.background}>
+                                <RiArrowDropDownFill />
+                            </TitleIcon>
+                        </SkillTitleWrapper>
+                        <SkillContent>
+                            {data.skills.map((skill) => (
+                                <SkillText key={skill.id}>
+                                    {skill.name}
+                                </SkillText>
+                            ))}
+                        </SkillContent>
+                    </SkillCard>
+                ))}
+            </SkillWrapper>
         </ProfessionalWrapper>
     );
 };

@@ -1,10 +1,14 @@
 import React from "react";
+
 import Layout from "../src/components/layout/layout";
-import About from "../src/components/sections/about/About";
-import Hero from "../src/components/sections/hero/Hero";
 import { Seo } from "../src/seo";
 
-const Home = () => {
+import Hero from "../src/components/sections/hero/Hero";
+import About from "../src/components/sections/about/About";
+import Portfolio from "../src/components/sections/portfolio/Portfolio";
+import Contact from "../src/components/sections/contact/Contact";
+
+const Home = ({ profile }) => {
     return (
         <>
             <Seo
@@ -14,6 +18,8 @@ const Home = () => {
             <Layout>
                 <Hero />
                 <About />
+                <Portfolio />
+                <Contact />
             </Layout>
         </>
     );

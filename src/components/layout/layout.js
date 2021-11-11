@@ -1,4 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
+import { useRouter } from "next/router";
+
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { ThemeProvider } from "styled-components";
@@ -9,11 +11,19 @@ import { dark, light } from "../../theme";
 import { GlobalStyle } from "../../constants";
 import { AppContext } from "../../context/AppContext";
 import { Main } from "../../styles/layout.style";
+import { AnimatePresence } from "framer-motion";
 
 const Layout = ({ children }) => {
+    const { pathname } = useRouter();
     const {
         dark: { darkMode },
+        path: { setPathDir },
     } = useContext(AppContext);
+
+    useEffect(() => {
+        setPathDir(pathname);
+    }, [pathname]);
+
     return (
         <>
             <Helmet>
@@ -24,13 +34,13 @@ const Layout = ({ children }) => {
                     crossOrigin
                 />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;800&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap"
                     rel="stylesheet"
                 />
             </Helmet>
             <ThemeProvider theme={darkMode ? dark : light}>
                 <GlobalStyle />
-                <Header />
+                <Header pathname={pathname} />
                 <Main>{children}</Main>
             </ThemeProvider>
         </>

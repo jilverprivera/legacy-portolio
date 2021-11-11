@@ -6,6 +6,7 @@ export const Button = styled.button`
     outline: none;
     background-color: transparent;
     border-radius: 0.2rem;
+    font-weight: 600;
     font-size: ${SIZES.body4};
     &:hover {
         cursor: pointer;
@@ -34,5 +35,6 @@ export const Button = styled.button`
         primary &&
         css`
             background-color: ${(props) => props.theme.secondary};
+            color: ${(props) => props.theme.background_auxiliar};
         `}
 `;
