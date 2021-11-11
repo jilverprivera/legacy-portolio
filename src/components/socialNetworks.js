@@ -10,12 +10,12 @@ import {
 
 const SocialNetworks = () => {
     const [networkPosition, setNetworkPosition] = useState(null);
+
     return (
         <SocialContent>
             {socialData.map((data, index) => (
-                <NetworkLink href={data.url}>
+                <NetworkLink href={data.url} key={index}>
                     <NetworkWrapper
-                        key={index}
                         background={data.background}
                         onMouseEnter={() => setNetworkPosition(index)}
                         onMouseLeave={() => setNetworkPosition(null)}
