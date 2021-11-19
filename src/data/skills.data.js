@@ -1,4 +1,3 @@
-
 import { GoBrowser, GoTerminal, GoDeviceMobile } from "react-icons/go";
 import { FaTools } from "react-icons/fa";
 
@@ -11,11 +10,11 @@ export const SkillData = [
         skills: [
             {
                 id: 1,
-                name: "Styled Components",
+                name: "Sass",
             },
             {
                 id: 2,
-                name: "Sass",
+                name: "Styled Components",
             },
             {
                 id: 3,
@@ -76,7 +75,7 @@ export const SkillData = [
         skills: [
             {
                 id: 1,
-                name: "React Native CLI",
+                name: "React Native",
             },
         ],
     },
@@ -90,17 +89,17 @@ export const SkillData = [
                 id: 1,
                 name: "Jest",
             },
+            //   {
+            //       id: 2,
+            //       name: "React Testing Library",
+            //   },
             {
                 id: 2,
-                name: "React Testing Library",
+                name: "Figma",
             },
             {
                 id: 3,
-                name: "Strapi CMS",
-            },
-            {
-                id: 4,
-                name: "Figma",
+                name: "Adobe Illustrator",
             },
         ],
     },

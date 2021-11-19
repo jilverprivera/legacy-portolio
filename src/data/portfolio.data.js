@@ -1,4 +1,6 @@
 import ecommerceImage from "../images/portfolio/tech-ecommerce.webp";
+import greenPID from "../images/portfolio/green-pid.webp";
+import moviesApp from "../images/portfolio/movies-app.webp";
 
 export const PortfolioData = [
     {
@@ -11,13 +13,13 @@ export const PortfolioData = [
         year: 2021,
         category: "Mobile",
         technologies: [
-            { name: "React Native CLI" },
+            { name: "React Native" },
             { name: "Firebase" },
             { name: "Arduino" },
         ],
         github_url: "https://github.com/jilverprivera/RN-sensorApp",
         url: "",
-        image: ecommerceImage,
+        image: greenPID,
     },
     {
         id: 2,
@@ -25,7 +27,7 @@ export const PortfolioData = [
         slug: "tech-ecommerce",
         title: "Tech Ecommerce",
         description:
-            "A minimal website for ecommerce with add to cart, login/register section, jwt verification, pay button with Paypal.",
+            "A minimal website for ecommerce with cart, jwt verification, and Paypal integration button.",
         year: 2021,
         category: "Web",
         technologies: [
@@ -36,6 +38,59 @@ export const PortfolioData = [
         ],
         github_url: "https://github.com/jilverprivera/react-frontend-ecommerce",
         url: "https://tech-ecommerce.vercel.app/",
+        image: ecommerceImage,
+    },
+
+    {
+        id: 4,
+        featured: false,
+        slug: "movie-app",
+        title: "MoviesApp",
+        description:
+            "You can view a list of Movies, including the most recent, the most voted, the most popular and upcoming releases.",
+        category: "Mobile",
+        year: 2021,
+        technologies: [
+            { name: "TypeScript" },
+            { name: "React Native" },
+            { name: "TheMovieDB" },
+        ],
+        github_url: "https://github.com/jilverprivera/movies-app",
+        url: "",
+        image: moviesApp,
+    },
+
+    {
+        id: 5,
+        featured: false,
+        slug: "pokedex-app",
+        title: "PokedexApp",
+        description:
+            "You can view a list of Pokemon, see more details about them and search by name or ID.",
+        category: "Mobile",
+        year: 2021,
+        technologies: [
+            { name: "TypeScript" },
+            { name: "React Native" },
+            { name: "PokeAPI" },
+        ],
+        github_url: "https://github.com/jilverprivera/pokedex",
+        url: "",
+        image: ecommerceImage,
+    },
+
+    {
+        id: 8,
+        featured: false,
+        slug: "face-detection",
+        title: "Images face detection",
+        description:
+            "The v2 of my first cryptocurrency website, in this version you can change the type of currency in which you want to hunt, you can also see a graph with the latest values.",
+        year: 2020,
+        category: "Engineering",
+        technologies: [{ name: "Python" }, { name: "OpenCV" }, { name: "Keras" }],
+        github_url: "https://github.com/jilverprivera/Cryptocurrency-trader-v2",
+        url: "https://coincrypto.netlify.app/",
         image: ecommerceImage,
     },
 
@@ -54,43 +109,7 @@ export const PortfolioData = [
         image: ecommerceImage,
     },
 
-    {
-        id: 4,
-        featured: false,
-        slug: "movie-app",
-        title: "MovieApp",
-        description:
-            "You can view a list of Movies, including the most recent, the most voted, the most popular and upcoming releases.",
-        category: "Mobile",
-        year: 2021,
-        technologies: [
-            { name: "TypeScript" },
-            { name: "React Native CLI" },
-            { name: "TheMovieDB" },
-        ],
-        github_url: "https://github.com/jilverprivera/movies-app",
-        url: "",
-        image: ecommerceImage,
-    },
-
-    {
-        id: 5,
-        featured: false,
-        slug: "pokedex-app",
-        title: "PokedexApp",
-        description:
-            "You can view a list of Pokemon, see more details about them and search by name or ID.",
-        category: "Mobile",
-        year: 2021,
-        technologies: [
-            { name: "TypeScript" },
-            { name: "React Native CLI" },
-            { name: "PokeAPI" },
-        ],
-        github_url: "https://github.com/jilverprivera/pokedex",
-        url: "",
-        image: ecommerceImage,
-    },
+   
 
     {
         id: 6,

@@ -4,8 +4,8 @@ export const ExperienceData = [
         position: "Frontend Developer Jr",
         company: "DyCO Solutions",
         location: "Bucaramanga, CO",
-        start_date: "July 2020",
-        end_date: "September 2020",
+        start_date: "Jul 2020",
+        end_date: "Sep 2020",
         task: [
             {
                 id: 1,
