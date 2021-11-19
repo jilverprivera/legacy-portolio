@@ -12,8 +12,8 @@ const Home = ({ profile }) => {
     return (
         <>
             <Seo
-                lang="en"
-                title="Jilver Pacheco — Frontend Developer / Electronic Engineer"
+                lang="es"
+                title="Jilver Pacheco — Desarrollador Frontend / Ingeniero Electrónico"
             />
             <Layout>
                 <Hero />
