@@ -10,7 +10,7 @@ import {
     EducationHeader,
     EducationIcon,
     ProfessionalWrapper,
-} from "../../../styles/about.style";
+} from "./about.style";
 
 export const Education = () => {
     const {

@@ -1,5 +1,5 @@
 import React from "react";
-import { IntroductionWrapper } from "../../../styles/about.style";
+import { IntroductionWrapper } from "./about.style";
 import { Button } from "../../../styles/button.style";
 import { Paragraph, Title } from "../../../styles/typography";
 
@@ -24,7 +24,7 @@ const Introduction = () => {
                 web.
             </Paragraph>
 
-            <Button largeButton primary>
+            <Button largeButton primary resposiveBlock>
                 View my CV
             </Button>
         </IntroductionWrapper>

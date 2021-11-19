@@ -10,8 +10,8 @@ import {
     FeaturedData,
     FeaturedImage,
     FeaturedIndex,
-    FeaturedSkills,
-    FeaturedSkillsContent,
+    ProjectSkill,
+    ProjectSkillsContent,
     FeaturedProjectName,
 } from "../../../styles/portfolio.style";
 import { Paragraph } from "../../../styles/typography";
@@ -24,7 +24,16 @@ export const FeaturedProjects = () => {
                 .map((data, index) => {
                     const indexVal = index + 1;
                     return (
-                        <FeaturedCard key={data.id}>
+                        <FeaturedCard
+                            key={data.id}
+                            initial={{
+                                opacity: 0,
+                                x: index % 2 === 0 ? -20 : 20,
+                            }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 1, x: index % 2 === 0 ? -20 : 20 }}
+                            transition={{ duration: 0.3, delay: index * 0.3 }}
+                        >
                             <FeaturedImage>
                                 <Image src={data.image} alt={data.slug} />
                             </FeaturedImage>
@@ -59,27 +68,27 @@ export const FeaturedProjects = () => {
                                     {data.description}
                                 </Paragraph>
 
-                                <FeaturedSkillsContent>
+                                <ProjectSkillsContent>
                                     {data.technologies.map((technology) => (
-                                        <FeaturedSkills key={technology.name}>
+                                        <ProjectSkill key={technology.name}>
                                             {technology.name}
-                                        </FeaturedSkills>
+                                        </ProjectSkill>
                                     ))}
-                                </FeaturedSkillsContent>
+                                </ProjectSkillsContent>
                                 <IconWrapper responsiveSize="100%">
                                     {data.github_url && (
-                                        <Link href={data.github_url}>
+                                        <a href={data.github_url}>
                                             <Icon large cursor="pointer">
                                                 <FaGithub />
                                             </Icon>
-                                        </Link>
+                                        </a>
                                     )}
                                     {data.url && (
-                                        <Link href={data.url}>
+                                        <a href={data.url}>
                                             <Icon large cursor="pointer">
                                                 <FaExternalLinkAlt />
                                             </Icon>
-                                        </Link>
+                                        </a>
                                     )}
                                 </IconWrapper>
                             </FeaturedData>

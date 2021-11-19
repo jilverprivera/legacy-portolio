@@ -11,7 +11,7 @@ import {
     TitleIcon,
     SkillContent,
     SkillText,
-} from "../../../styles/about.style";
+} from "./about.style";
 
 export const Skills = () => {
     return (
@@ -22,8 +22,14 @@ export const Skills = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
         >
             <SkillWrapper>
-                {SkillData.map((data) => (
-                    <SkillCard key={data.id}>
+                {SkillData.map((data, index) => (
+                    <SkillCard
+                        key={data.id}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.2 }}
+                    >
                         <SkillTitleWrapper background={data.background}>
                             <SkillIcon>{data.icon}</SkillIcon>
                             <SkillTitle>{data.title}</SkillTitle>

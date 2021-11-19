@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import Typewriter from "typewriter-effect";
+
 import { SIZES } from "../../../constants";
-import { Container, WrapperFlex } from "../../../styles/global.style";
+
 import { HeroWrapper } from "../../../styles/hero.style";
-import { AuthorName, Paragraph } from "../../../styles/typography";
-import { LastProjects } from "./lastProjects";
+import { Container, WrapperFlex } from "../../../styles/global.style";
+import {
+    AuthorName,
+    Paragraph,
+    ProfessionalTitle,
+} from "../../../styles/typography";
+import { SmoothLink } from "../../smoothLink";
+import { dark, light } from "../../../theme";
+import { AppContext } from "../../../context/AppContext";
+
 const Hero = () => {
+    const {
+        dark: { darkMode },
+    } = useContext(AppContext);
     return (
-        <Container id="home">
+        <Container
+            id="home"
+            background={
+                darkMode ? dark.background_auxiliar : light.background_auxiliar
+            }
+        >
             <WrapperFlex>
                 <HeroWrapper>
-                    <Paragraph extraLarge letterSpacing="1px">
-                        Hey there!
+                    <Paragraph extraLarge letterSpacing="1px" fontWeight="600">
+                        Hey!, welcome🖐
                     </Paragraph>
-                    <AuthorName fontSize={SIZES.largeTitle}>
+                    <AuthorName fontSize={SIZES.ultraLarge}>
                         Jilver Pacheco
                     </AuthorName>
                     <div
@@ -23,10 +40,10 @@ const Hero = () => {
                             alignItems: "center",
                         }}
                     >
-                        <Paragraph extraLarge fontWeight="500">
-                            I&apos;m a&nbsp;
+                        <Paragraph extraLarge fontWeight="600">
+                            I&apos;m&nbsp;
                         </Paragraph>
-                        <Paragraph extraLarge fontWeight="500">
+                        <ProfessionalTitle>
                             <Typewriter
                                 options={{
                                     loop: true,
@@ -34,16 +51,26 @@ const Hero = () => {
                                     delay: 50,
                                     pauseFor: 2000,
                                     strings: [
-                                        "Frontend Developer.",
-                                        "Electronic Engineer.",
+                                        "a Frontend Developer.",
+                                        "an Electronic Engineer.",
                                     ],
                                 }}
                             />
-                        </Paragraph>
+                        </ProfessionalTitle>
                     </div>
-                    <LastProjects />
+                    <SmoothLink name="View more about me" route="about" />
                 </HeroWrapper>
             </WrapperFlex>
+            <div
+                style={{
+                    position: "absolute",
+                    top: "0",
+                    right: "0",
+                    width: "50%",
+                    height: "100vh",
+                    background: "#ddd",
+                }}
+            ></div>
         </Container>
     );
 };
