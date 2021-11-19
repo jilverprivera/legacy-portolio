@@ -2,7 +2,7 @@ export const light = {
     background: "#F6F6F6",
     background_auxiliar: "#FFFFFF",
     text: "#1D1D1D",
-    primary: "#5429CF",
+    primary: "#3090D4",
     secondary: "#7731d8",
 };
 
