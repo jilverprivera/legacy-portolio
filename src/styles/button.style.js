@@ -37,4 +37,14 @@ export const Button = styled.button`
             background-color: ${(props) => props.theme.secondary};
             color: ${(props) => props.theme.background_auxiliar};
         `}
+
+        ${({ resposiveBlock }) =>
+        resposiveBlock &&
+        css`
+            @media (max-width: 768px) {
+                width: 100%;
+                display: block;
+                margin-bottom: 3rem;
+            }
+        `}
 `;

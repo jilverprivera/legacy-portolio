@@ -8,8 +8,8 @@ export const MessageContent = styled.div`
     justify-content: center;
     flex-direction: column;
 //     border: 1px solid #000;
-    @media (max-width: 76.8rem) {
-        width: 80%;
+    @media (max-width: 768px) {
+        width: 100%;
         margin: 0rem auto 2rem;
      //    margin-bottom: 2rem;
     }
@@ -30,10 +30,10 @@ export const FormContent = styled.form`
     justify-content: center;
     flex-direction: column;
     background-color: ${(props) => props.theme.background_auxiliar};
-    box-shadow: -0.3rem -0.3rem 1.2rem rgba(255, 255, 255, 1),
-        0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
+//     box-shadow: -0.3rem -0.3rem 1.2rem rgba(255, 255, 255, 1),
+//         0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         margin: 0rem auto;
         width: 100%;
     }
@@ -58,7 +58,7 @@ export const Input = styled.input`
         color: ${(props) => props.theme.text};
         opacity: 1;
     }
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         margin: 0.5rem auto;
         width: 95%;
     }
@@ -83,7 +83,7 @@ export const TextArea = styled.textarea`
         color: ${(props) => props.theme.text};
         opacity: 1;
     }
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         margin: 0.5rem auto;
         width: 95%;
     }

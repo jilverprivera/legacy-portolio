@@ -6,7 +6,7 @@ export const IconWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         width: ${(props) => props.responsiveSize};
     }
 `;

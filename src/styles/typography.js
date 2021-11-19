@@ -8,7 +8,7 @@ export const Paragraph = styled.p`
     text-align: ${(props) => props.textAlign};
     line-height: ${(props) => props.lineHeight};
     letter-spacing: ${(props) => props.letterSpacing};
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         text-align: ${(props) => props.responsiveAlign};
     }
 
@@ -28,14 +28,14 @@ export const Paragraph = styled.p`
             font-size: ${SIZES.body3};
         `}
 
-        ${({ extraLarge }) =>
+    ${({ extraLarge }) =>
         extraLarge &&
         css`
             font-size: ${SIZES.body2};
         `}
-        
-        ${({ upperCase }) =>
-        upperCase &&
+    
+    ${({ upperCase }) =>
+    upperCase &&
         css`
             text-transform: uppercase;
         `}
@@ -61,46 +61,27 @@ export const Title = styled.h2`
     font-weight: 700;
     color: ${(props) => props.theme.text};
     z-index: 1;
+    @media (max-width: 768px) {
+        text-align: center;
+        width: 100%;
+    }
+`;
+
+export const ProfessionalTitle = styled.h2`
+    font-size: ${SIZES.mediumTitle};
+    font-weight: 600;
+    color: ${(props) => props.theme.text};
 `;
 
 export const SectionTitle = styled.h2`
     font-size: ${SIZES.title2};
     position: relative;
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
     font-weight: 700;
     color: ${(props) => props.theme.text};
     z-index: 1;
-    margin-left: 7rem;
-    //     border: 1px solid #000;
-    //     width: 100%;
-//     &:before {
-//         content: " ";
-//         width: 7rem;
-//         height: 0.5rem;
-//         font-size: 7rem;
-//         position: absolute;
-//         top: 50%;
-//         left: 0%;
-//         background-color: #ddd;
-//         transform: translate(-110%, -50%);
-//         color: #ddd;
-//         z-index: -1;
-//     }
-
-//     &:after {
-//         content: " ";
-//         width: 20rem;
-//         height: 0.5rem;
-//         font-size: 7rem;
-//         position: absolute;
-//         top: 50%;
-//         right: 0%;
-//         background-color: #ddd;
-//         transform: translate(110%, -50%);
-//         color: #ddd;
-//         z-index: -1;
-//     }
-    @media (max-width: 76.8rem) {
+    width: 100%;
+    @media (max-width: 768px) {
         text-align: center;
     }
 

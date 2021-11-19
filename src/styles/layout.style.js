@@ -1,40 +1,27 @@
-import { Link } from "react-scroll";
+import { Link as NavHashLink } from "react-scroll";
+// import Link from "next/link"
 import { motion } from "framer-motion";
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { SIZES } from "../constants";
 
 // <----------------------------- HEADER ----------------------------->
-export const HeaderWrapper = styled(motion.header)`
+export const HeaderContainer = styled(motion.header)`
     position: fixed;
     top: 0rem;
     left: 0rem;
     z-index: 100;
     max-width: 100vw;
     width: 100%;
-    transition: background-color 1s;
-    .bg {
-        background-color: transparent;
-        width: 100%;
-        height: 7rem;
-        transition: 0.5s;
-        color: #000;
-    }
-    .bg-active {
-        width: 100%;
-        height: 100%;
-        transition: 0.5s;
-        height: 6rem;
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(1rem);
-        box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-    }
+    transition: all 0.4s;
+    background: ${(props) => props.background};
+    height: ${(props) => props.height};
+    backdrop-filter: blur(${(props) => props.blur});
 `;
 
 export const HeaderContent = styled.nav`
-    width: 95%;
+    width: 90%;
     max-width: 130rem;
     height: 100%;
-
     margin: 0rem auto;
     display: flex;
     align-items: center;
@@ -42,8 +29,9 @@ export const HeaderContent = styled.nav`
     position: relative;
 `;
 
-export const NavListWrapper = styled.div`
+export const HeaderWrapper = styled.div`
     display: flex;
+    margin-left: 5rem;
     flex-direction: row;
     align-items: center;
 `;
@@ -52,12 +40,12 @@ export const NavList = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         display: none;
     }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(NavHashLink)`
     text-decoration: none;
     margin: 0rem 1rem;
     font-size: ${SIZES.body4};
@@ -72,6 +60,16 @@ export const NavLink = styled(Link)`
             font-size: ${SIZES.body2};
             margin: 1rem;
         `}
+`;
+
+export const PageLink = styled.span`
+    text-decoration: none;
+    margin: 0rem 1rem;
+    font-size: ${SIZES.body4};
+    color: ${(props) => props.theme.text};
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export const ThemeSwitch = styled.div`
@@ -102,15 +100,15 @@ export const ThemeSwitch = styled.div`
 `;
 
 export const DrawerIcon = styled.div`
-@media(min-width: 76.8rem){
-     display: none;
-}
     width: 3rem;
     height: ${(props) => (props.open ? "0rem" : "0.4rem")};
     border-radius: 0.5rem;
     background-color: ${(props) => props.theme.text};
     margin-left: 1rem;
     transition: 0.2s;
+    &:hover {
+        cursor: pointer;
+    }
 
     &::before {
         position: absolute;
@@ -142,22 +140,88 @@ export const DrawerIcon = styled.div`
 
 export const DrawerContent = styled(motion.div)`
     position: absolute;
-    background-color: ${(props) => props.theme.background};
+    background-color: ${(props) => props.theme.background_auxiliar};
     top: 6rem;
     left: 0rem;
     width: 100%;
-    height: 100vh;
+    height: 30rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    //     border: 1px solid rgba(0, 0, 0, 1);
 `;
 
 // <----------------------------- MAIN ----------------------------->
 
 export const Main = styled(motion.main)`
     width: 100%;
+    min-height: 100vh;
     margin: 0rem auto;
 `;
 
 // <----------------------------- FOOTER ----------------------------->
+export const FooterContent = styled.footer`
+    width: 100%;
+    height: 6rem;
+    background-color: #ddd;
+    @media (max-width: 768px) {
+        height: 10rem;
+    }
+`;
+
+export const FooterWrapper = styled.div`
+    max-width: 130rem;
+    width: 100%;
+    height: 100%;
+    margin: 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+`;
+
+export const FooterIconWrapper = styled.div`
+    display: none;
+    @media (max-width: 768px) {
+        //     margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`;
+
+export const FooterLink = styled.a`
+    text-decoration: none;
+    color: ${(props) => props.theme.text};
+`;
+
+export const FooterIcon = styled.span`
+    font-size: ${SIZES.body2};
+    margin: 0rem 0.5rem;
+`;
+
+export const FooterDescriptionWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+`;
+
+export const FooterDescription = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+        margin-top: 1rem;
+    }
+`;

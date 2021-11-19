@@ -6,11 +6,12 @@ export const SocialContent = styled.div`
      top: 50%;
      left 0;
      transform: translateY(-50%);
+z-index: 100;
 `;
 
 export const NetworkLink = styled.a`
     text-decoration: none;
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         display: none;
     }
 `;
@@ -27,7 +28,7 @@ export const NetworkWrapper = styled.div`
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
-    color: ${(props) => props.theme.background};
+    color: #fff;
     background: ${(props) => props.background};
     &:hover {
         cursor: pointer;

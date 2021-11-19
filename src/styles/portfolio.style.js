@@ -1,66 +1,6 @@
-import Link from "next/link";
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 import { SIZES } from "../constants";
-
-export const StagesContent = styled.div`
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-content: center;
-    row-gap: 1rem;
-    column-gap: 1rem;
-    margin-bottom: 5rem;
-//     border: 1px solid #000;
-`;
-
-export const StagesCard = styled.div`
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem 6rem;
-    overflow: hidden;
-//     border: 1px solid #000;
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        opacity: 1;
-        transform: translateY(80%);
-        transition: 0.4s;
-    }
-    .description_wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        opacity: 0;
-        transform: translateY(150%);
-        transition: 0.4s;
-    }
-
-    &:hover {
-        .header {
-            transform: translateY(-150%);
-            opacity: 0;
-        }
-        .description_wrapper {
-            transform: translateY(-30%);
-            opacity: 1;
-        }
-    }
-`;
-
-export const StageNumber = styled.span`
-    font-size: ${SIZES.body1};
-    color: ${(props) => props.theme.secondary};
-`;
-export const StageIcon = styled.span`
-    color: ${(props) => props.theme.secondary};
-    font-size: ${SIZES.title2};
-`;
 
 export const BannerContent = styled.section`
     width: 100%;
@@ -83,28 +23,47 @@ export const BannerLink = styled.span`
     }
 `;
 
-export const PortfolioCard = styled.div`
-    width: 100%;
-    height: 30rem;
-    background-color: ${(props) => props.theme.background_auxiliar};
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.1),
-        -0.2rem -0.2rem 3.5rem rgba(255, 255, 255, 1);
+// <--------- MULTIFUNCTIONAL COMPONENTS --------->
+
+export const ProjectSkillsContent = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: ${(props) => props.margin};
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+    }
 `;
 
-export const FeaturedCard = styled.div`
+export const ProjectSkill = styled.span`
+    font-size: ${SIZES.body5};
+    letter-spacing: 0.1rem;
+    color: ${(props) => props.theme.text};
+    &::before {
+        content: "";
+        margin: 0rem 0.5rem;
+    }
+    &:first-child {
+        &::before {
+            content: "";
+            margin: 0rem;
+        }
+    }
+`;
+
+export const FeaturedCard = styled(motion.div)`
     width: 100%;
     margin: 3rem auto;
     position: relative;
 
-    //     border: 1px solid #000;
     &:nth-child(odd) {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
-        @media (max-width: 76.8rem) {
+        @media (max-width: 768px) {
             display: block;
             border-bottom: 0.1rem solid
                 ${(props) => props.theme.background_auxiliar};
@@ -116,7 +75,7 @@ export const FeaturedCard = styled.div`
         align-items: center;
         justify-content: space-between;
         flex-direction: row-reverse;
-        @media (max-width: 76.8rem) {
+        @media (max-width: 768px) {
             display: block;
             border-bottom: 0.1rem solid
                 ${(props) => props.theme.background_auxiliar};
@@ -129,13 +88,12 @@ export const FeaturedImage = styled.div`
 
 export const FeaturedData = styled.div`
     width: 40%;
-    //     max-width: 40rem;
     display: flex;
     align-items: ${(props) => props.childAlign};
     justify-content: center;
     flex-direction: column;
     position: relative;
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         margin-top: 3rem;
         width: 100%;
     }
@@ -159,7 +117,7 @@ export const FeaturedTitle = styled.p`
     font-weight: 600;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         width: 100%;
         text-align: center;
     }
@@ -171,35 +129,111 @@ export const FeaturedProjectName = styled.p`
     font-weight: 600;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
         width: 100%;
         text-align: center;
     }
 `;
 
-export const FeaturedSkillsContent = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    @media (max-width: 76.8rem) {
-     width: 100%;
-     // text-align: center;
- }
+export const Card = styled(motion.div)`
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    background-color: ${(props) => props.theme.background_auxiliar};
+    border-radius: 0.5rem;
+    padding: 2rem;
+    @media (max-width: 768px) {
+        margin: 2rem 0rem;
+    }
+`;
+export const IndexProject = styled.span`
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+    font-size: ${SIZES.ultraLarge};
+    font-weight: 800;
+    color: ${(props) => props.theme.background};
+`;
+export const CardIcon = styled.div`
+    height: 7rem;
+    color: ${(props) => props.theme.text};
+    font-size: ${SIZES.largeTitle};
 `;
 
-export const FeaturedSkills = styled.span`
-    font-size: ${SIZES.body5};
-    letter-spacing: 0.1rem;
+export const CardTitle = styled.h2`
+    height: 5rem;
+    font-size: ${SIZES.smallTitle};
     color: ${(props) => props.theme.text};
-    &::before {
-        content: "";
-        margin: 0rem 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+`;
+export const CardDescription = styled.p`
+    height: 11rem;
+    font-size: ${SIZES.smallParagraph};
+    color: ${(props) => props.theme.text};
+    line-height: 2.2rem;
+`;
+
+export const StagesContainer = styled.div``;
+
+export const StagesContent = styled.div`
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0rem auto;
+`;
+
+export const StagesCard = styled(motion.div)`
+    width: 35rem;
+    position: relative;
+    margin: 1rem 0rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: ${(props) => props.theme.primary};
+
+    left: calc(34rem * ${(props) => props.cardAlign});
+
+    &:hover {
+        cursor: pointer;
     }
-    &:first-child {
-        &::before {
-            content: "";
-            margin: 0rem;
-        }
+    @media (max-width: 768px) {
+        width: 100%;
+        display: block;
+        border: 1px solid #000;
+        left: 0rem;
     }
+`;
+
+export const StageCardTitle = styled.div`
+    position: relative;
+    // border: 1px solid #000;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`;
+
+export const StageCardContent = styled.div`
+    background-color: ${(props) => props.theme.background_auxiliar};
+    // padding: 1rem;
+    height: ${props => props.contentHeight};
+    transition: all 0.4s;
+`;
+
+export const StageIndex = styled.span`
+position: relative;
+top: -0.25rem;
+    font-size: ${SIZES.large};
+    font-weight: 800;
+    margin-right: 1rem;
+
+
+    color: ${(props) => props.theme.background_auxiliar};
+`;
+export const StageIcon = styled.span`
+    color: ${(props) => props.theme.secondary};
+    font-size: ${SIZES.title2};
 `;
