@@ -5,8 +5,18 @@ export const SIZES = {
     body4: "1.4rem",
     body5: "1.2rem",
 
-    largeTitle: "7rem",
     title: "5rem",
     title2: "4rem",
     title3: "2.5rem",
+    title4: "1.8rem",
+
+    ultraLarge: "9rem",
+    extraLarge: "7rem",
+    large: "3rem",
+    medium: "2rem",
+    small: "1.4rem",
+    largeTitle: "4rem",
+    mediumTitle: "2.5rem",
+    smallTitle: "1.8rem",
+    smallParagraph: "1.4rem",
 };

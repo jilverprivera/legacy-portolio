@@ -31,7 +31,5 @@ export const GlobalStyle = createGlobalStyle`
     .active{
         font-weight: 700;
     }
-    .active-bg{
-        font-weight: 700;
-    }
+   
 `;
