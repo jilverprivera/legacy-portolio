@@ -17,7 +17,7 @@ export const Experience = () => {
             transition={{ ease: "easeOut", duration: 0.5 }}
         >
             {ExperienceData.map((data) => (
-                <CardExperience data={data}/>
+                <CardExperience key={data.id} data={data}/>
             ))}
         </ProfessionalWrapper>
     );
