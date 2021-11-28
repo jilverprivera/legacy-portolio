@@ -6,7 +6,7 @@ import {
     AiFillLinkedin,
     AiOutlineTwitter,
 } from "react-icons/ai";
-export const socialData = [
+export const networks = [
     {
         id: 1,
         name: "Github",
