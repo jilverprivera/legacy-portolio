@@ -20,7 +20,7 @@ export const NetworkWrapper = styled.div`
     width: ${(props) => props.width};
     margin: 1rem 0rem;
     padding: 1rem 2rem 1rem 0.5rem;
-    font-size: ${SIZES.body5};
+    font-size: ${SIZES.extraSmall};
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     transition: width 0.4s;
@@ -36,6 +36,6 @@ export const NetworkWrapper = styled.div`
 `;
 
 export const NetworkIcon = styled.span`
-    font-size: ${SIZES.body3};
+    font-size: ${SIZES.regular};
     margin-right: 1rem;
 `;

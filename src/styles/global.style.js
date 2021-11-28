@@ -1,46 +1,61 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
 
-export const Container = styled.section`
-    padding: ${(props) => props.padding};
+export const Container = styled(motion.section)`
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    // border: 1px solid #000;
     justify-content: center;
+    flex-direction: column;
     @media (max-width: 768px) {
-        padding: 3rem 0rem;
+        padding: 6rem 0rem;
     }
+    ${({ paddingtop }) => paddingtop && css`padding-top: 10rem;`}
+
+    
 `;
 
-export const WrapperFlex = styled(motion.div)`
-    width: 90%;
+export const ContentFlex = styled(motion.section)`
     position: relative;
-    max-width: 130rem;
-    //     min-height: 100vh;
+    max-width: 125rem;
     margin: auto;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+    }
+    // <----- WIDHT ----->
+    ${({ width90 }) => width90 && css`width: 90%;`}
+    ${({ width100 }) => width100 && css`width: 100%;`}
+    
+    // <----- ALIGN ITEMS ----->
+    ${({ alignstart }) => alignstart && css`align-items: flex-start;`}
+    ${({ aligncenter }) => aligncenter && css`align-items: center;`}
+    
+    // <----- JUSTIFY CONTENT ----->
+    ${({ justifycenter }) => justifycenter && css`justify-content: center;`}
+    ${({ justifystart }) => justifystart && css`justify-content: flex-start;`}
+
+    // <----- DIRECTION ----->
+    ${({ row }) => row && css`flex-direction: row;`}
+    ${({ column }) => column && css`flex-direction: column;`}
+    
 `;
 
-export const WrapperGrid = styled(motion.div)`
-    width: 90%;
-    max-width: 130rem;
-    // padding: 6rem 0rem;
-    margin: auto;
+export const ContentGrid = styled(motion.section)`
     position: relative;
+    max-width: 125rem;
+    margin: auto;
     display: grid;
-    row-gap: ${(props) => props.rowGap};
-    column-gap: ${(props) => props.columnGap};
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(${(props) => props.columnWidth}, 1fr)
-    );
-    align-content: center;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
     @media (max-width: 768px) {
         display: block;
     }
+    // <----- WIDHT ----->
+    ${({ width90 }) => width90 && css`width: 90%;`}
+    ${({ width100 }) => width100 && css`width: 100%;`}
 `;
+
