@@ -14,7 +14,7 @@ const Portfolio = () => {
         <>
             <Seo lang={currentLanguage} title={t("web-title")} />
             <Layout>
-                <Banner />
+                <p>Banner</p>
             </Layout>
         </>
     );
