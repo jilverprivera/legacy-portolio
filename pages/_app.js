@@ -1,4 +1,5 @@
 import i18next from "i18next";
+import Head from "next/head";
 import { I18nextProvider } from "react-i18next";
 
 import { AppProvider } from "../src/context/AppContext";
@@ -23,18 +24,21 @@ const MyApp = ({ Component, pageProps }) => {
                 global: global_es,
                 about: about_es,
                 portfolio: portfolio_es,
-                contact: contact_es
+                contact: contact_es,
             },
             en: {
                 global: global_en,
                 about: about_en,
                 portfolio: portfolio_en,
-                contact: contact_en
+                contact: contact_en,
             },
         },
     });
     return (
         <AppProvider>
+            <Head>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <I18nextProvider i18n={i18next}>
                 <Component {...pageProps} />
             </I18nextProvider>
