@@ -23,13 +23,13 @@ const MyApp = ({ Component, pageProps }) => {
                 global: global_es,
                 about: about_es,
                 portfolio: portfolio_es,
-                contact: contact_es,
+                contact: contact_es
             },
             en: {
                 global: global_en,
                 about: about_en,
                 portfolio: portfolio_en,
-                contact: contact_en,
+                contact: contact_en
             },
         },
     });
