@@ -3,7 +3,8 @@ import { AnimatePresence } from "framer-motion";
 
 // <--- IMPORTANT --->
 import { AppContext } from "../../context/AppContext";
-import { useWebTranslation } from "../../hooks/useWebTranslation";
+
+import Logo from "../../../public/icon.svg";
 
 // <--- COMPONENTS --->
 import Drawer from "./drawer";
@@ -15,11 +16,10 @@ import {
     HamburgerMenu,
     MenuContent,
     ContentHeader,
-    LngButton,
+    LogoContainer,
 } from "../../styles/layout/header.style";
 
 const Header = () => {
-    
     const { drawer, navbarActive } = useContext(AppContext);
     const { openDrawer, setOpenDrawer } = drawer;
 
@@ -34,7 +34,9 @@ const Header = () => {
             onShadow={navbarActive ? "0rem 0.2rem 1rem rgba(0,0,0,0.1)" : null}
         >
             <HeaderContent>
-                <h1>Jilver pacheco</h1>
+                <LogoContainer>
+                    <Logo />
+                </LogoContainer>
                 <ContentHeader>
                     <MenuContent onClick={() => setOpenDrawer(!openDrawer)}>
                         <HamburgerMenu open={openDrawer} />

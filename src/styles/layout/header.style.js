@@ -30,6 +30,15 @@ export const HeaderContent = styled.nav`
     position: relative;
 `;
 
+export const LogoContainer = styled.div`
+    // border: 1px solid #000000;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
 export const HeaderWrapper = styled.div`
     display: flex;
     margin-left: 5rem;
