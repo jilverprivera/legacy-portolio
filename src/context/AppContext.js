@@ -2,10 +2,15 @@ import { createContext, useEffect, useState } from "react";
 import { useSSR } from "../hooks/useSSR";
 
 export const AppContext = createContext();
+
 export const AppProvider = ({ children }) => {
+    const [currentLanguage, setCurrentLanguage] = useState("es");
+
     const [navbarActive, setNavbarActive] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
-    const [openDrawer, setopenDrawer] = useState(false);
+    const [openDrawer, setOpenDrawer] = useState(false);
+
+    const [openSettings, setOpenSettings] = useState(false);
+    const [darkTheme, setDarkTheme] = useState(false);
 
     const { isRendering } = useSSR();
 
@@ -13,7 +18,6 @@ export const AppProvider = ({ children }) => {
         isRendering &&
             (window.onscroll = () => {
                 if (window.pageYOffset >= 80) {
-                    console.log(window.pageYOffset);
                     setNavbarActive(true);
                 } else {
                     setNavbarActive(false);
@@ -21,11 +25,11 @@ export const AppProvider = ({ children }) => {
             });
     }, [isRendering]);
 
-    const [professionalView, setProfessionalView] = useState("skills");
     const appState = {
-        dark: { darkMode, setDarkMode },
-        drawer: { openDrawer, setopenDrawer },
-        profile: { professionalView, setProfessionalView },
+        theme: { darkTheme, setDarkTheme },
+        drawer: { openDrawer, setOpenDrawer },
+        language: { currentLanguage, setCurrentLanguage },
+        settings: { openSettings, setOpenSettings },
         navbarActive,
     };
 
