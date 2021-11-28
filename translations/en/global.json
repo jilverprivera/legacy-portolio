@@ -1,0 +1,13 @@
+{
+    "web-title": "Jilver Pacheco | Frontend Developer & Electronic Engineer",
+    "header":{
+        "home-link": "Home",
+        "about-link": "About",
+        "portfolio-link": "Portfolio",
+        "contact-link": "Contact"
+    },
+    "banner": {
+        "welcome_message": "Hello, I'm",
+        "button": "Read more"
+    }
+}

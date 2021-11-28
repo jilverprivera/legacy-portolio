@@ -1,0 +1,130 @@
+{
+    "featured":{
+        "before-title": "Featured projects",
+        "title": "My Works.",
+        "data":[
+            {
+                "id": "1",
+                "category": "Mobile",
+                "featured": "Featured Project",
+                "slug": "green-pid",
+                "name": "GreenPID",
+                "description":"Mobile IoT platform to monitor the variables involved in the control of a greenhouse-based industrial process.",
+                "year": "2021",
+                "url": "",
+                "android_url": "",
+                "ios_link": "",
+                "github_url": "https://github.com/jilverprivera/RN-GreenPID",
+                "technologies":[
+                    {"name": "React Native"},
+                    {"name": "Firebase"},
+                    {"name": "Arduino"}
+                ]
+            },
+            {
+                "id": "2",
+                "category": "Web",
+                "featured": "Featured Project",
+                "slug": "tech-ecommerce",
+                "name": "TechEcommerce",
+                "description":"Minimalist website for ecommerce with cart, jwt verification, and Paypal integration button.",
+                "year": "2021",
+                "url": "https://tech-ecommerce.vercel.app/",
+                "android_url": "",
+                "ios_link": "",
+                "github_url": "https://github.com/jilverprivera/react-frontend-ecommerce",
+                "technologies":[
+                    {"name": "MongoDB"},
+                    {"name": "Express.JS"},
+                    {"name": "React.JS"},
+                    {"name": "Node.JS"}
+                ]
+            }
+        ]
+    },
+    "portfolio":{
+        
+        "title": "Other projects",
+        "data":[
+            {
+                "id": "1",
+                "category": "Mobile",
+                "name": "MoviesApp",
+                "description":"Mobile application with a list of Pokemon, their information and search by name or ID.",
+                "year": "2021",
+                "url": "",
+                "android_url": "",
+                "ios_link": "",
+                "github_url": "https://github.com/jilverprivera/movies-app",               
+                "technologies":[
+                    {"name": "TypeScript"},
+                    {"name": "React Native"},
+                    {"name": "TheMovieDB"}
+                ]
+            },
+            {
+                "id": "2",
+                "category": "Mobile",
+                "name": "Pokedex",
+                "description":"You can view a list of Pokemon, view more details about them and search by name or ID.",
+                "year": "2021",
+                "url": "",
+                "android_url": "",
+                "ios_link": "",
+                "github_url": "https://github.com/jilverprivera/pokedex",             
+                "technologies":[
+                    {"name": "TypeScript"},
+                    {"name": "React Native"},
+                    {"name": "TheMovieDB"}
+                ]
+            },
+            {
+                "id": "3",
+                "category": "Engineering",
+                "name": "Images face detection",
+                "description":"",
+                "year": "2021",
+                "url": "",
+                "android_url": "",
+                "ios_link": "",
+                "github_url": "",             
+                "technologies":[
+                    {"name": "Python"},
+                    {"name": "OpenCV"},
+                    {"name": "Keras"}
+                ]
+            },
+            {
+                "id": "4",
+                "category": "Web",
+                "name": "Coincrypto",
+                "description":"Version II of my first cryptocurrency website, you can change the type of currency in which you want to trade and you can also see a graph with the last 24 values.",
+                "year": "2021",
+                "url": "https://coincrypto.netlify.app/",             
+                "android_url": "",
+                "ios_link": "",
+                "github_url": "https://github.com/jilverprivera/Cryptocurrency-trader-v2",
+                "technologies":[
+                    {"name": "React"},
+                    {"name": "cryptocompare API"}
+                ]
+            },
+            {
+                "id": "5",
+                "category": "Desktop",
+                "name": "Electro-TECH",
+                "description":"Desktop application for electronic engineering students of the 'Universidad de Investigación y Desarrollo' in which there are topics related to various academic courses.",
+                "year": "2020",
+                "url": "",
+                "android_url": "",
+                "ios_link": "",
+                "github_url": "https://github.com/jilverprivera/Electron.JS-Electro-TECH",            
+                "technologies":[
+                    {"name": "JavaScript"},
+                    {"name": "Electron.JS"},
+                    {"name": "SCSS"}
+                ]
+            }
+        ]
+    }
+}
