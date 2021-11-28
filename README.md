@@ -13,24 +13,25 @@ This is my personal website where you can find information about my professional
 1. Next.js
 2. Styled Components
 3. Framer motion
+4. i18next
 4. Vercel
 
 ## 🎨 Color Reference
 
-| Type       | Light     | Dark      |
-| ---------- | --------- | --------- |
-| Background | `#EFF1F5` | `#202024` |
-| Text       | `#1D1D1D` | `#F3F2F4` |
-| Primary    | `#A7C5EB` | `#A7C5EB` |
-| Secondary  | `#949CDF` | `#5429CF` |
-| Tertiary   | `#a8b2d1` | `#a8b2d1` |
+| Color      |    HEX    | 
+| ---------- | --------- | 
+| Background | `#EFF1F5` | 
+| Text       | `#1D1D1D` | 
+| Primary    | `#A7C5EB` | 
+| Secondary  | `#949CDF` | 
+| Tertiary   | `#a8b2d1` | 
 
 ## 👀 Instalation
 
 1.  **Clone my project.**
 
     ```
-    git clone https://github.com/jilverprivera/jilverpacheco.vercel.app.git
+    git clone https://github.com/jilverprivera/jilver-portfolio.git
 
     ```
 
