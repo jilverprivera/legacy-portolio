@@ -1,4 +1,3 @@
-import { GlobalStyle } from "./GLOBAL";
 import { SIZES } from "./SIZES";
-
-export { GlobalStyle, SIZES };
+import { LayoutVariants } from "./VARIANTS";
+export {LayoutVariants, SIZES };
