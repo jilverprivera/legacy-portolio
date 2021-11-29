@@ -43,6 +43,13 @@ export const Card = styled(motion.div)`
     &:hover {
         background-color: ${({ theme }) => theme.light};
     }
+    @media (max-width: 768px) {
+        width: 90%;
+        margin: 0rem auto 2rem;
+        &:first-child {
+            width: 90%;
+        }
+    }
 `;
 
 export const LastProjectIcon = styled.span`
@@ -107,8 +114,6 @@ export const ProjectTitle = styled.h2`
         text-align: center;
     }
 `;
-
-
 
 export const Technology = styled.span`
     font-size: ${SIZES.small};

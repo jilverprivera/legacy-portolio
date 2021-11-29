@@ -24,14 +24,11 @@ const GLOBAL = createGlobalStyle`
    .responsive__featuredImage{
        border-top-left-radius:1rem;
        border-top-right-radius:1rem;
-        // @media (max-width: 768px) {
-        }
+        
    }
 
-   .banner__image{
-    //    border: 1px solid #000;
-       ;
-    //    border-radius: 50%;
+   .responsive__banner-image{
+       border-radius: 2rem;
    }
 `;
 

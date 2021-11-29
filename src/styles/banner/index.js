@@ -9,9 +9,17 @@ export const BannerImage = styled.div`
     right: 0rem;
     max-height: 100vh;
     height: 100vh;
-    // border: 1px solid #000;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
-
+export const ResponsiveImage = styled.div`
+display: none;
+@media (max-width: 768px) {
+    display: block;
+    margin-bottom: 3rem;
+}
+`
 export const BannerContent = styled.div`
     width: 90%;
     position: relative;

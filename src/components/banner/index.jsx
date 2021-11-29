@@ -5,11 +5,11 @@ import Image from "next/image";
 import Profile from "../../../assets/profile.webp";
 // <--- COMPONENTS --->
 import Professions from "./professions";
-// import SocialLinks from "./SocialLinks";
+import SocialLinks from "./SocialLinks";
 
 // <--- STYLES --->
 import { Container, ContentFlex } from "../../styles/global.style";
-import { BannerButton, BannerImage, BannerTitle } from "../../styles/banner";
+import { BannerButton, BannerImage, BannerTitle, ResponsiveImage } from "../../styles/banner";
 import { Paragraph } from "../../styles/typography";
 
 const Banner = () => {
@@ -25,11 +25,19 @@ const Banner = () => {
                 />
             </BannerImage>
             <ContentFlex alignstart justifycenter column width100>
+                <ResponsiveImage>
+                    <Image
+                        src={Profile}
+                        alt="profile"
+                        className="responsive__banner-image"
+                        width="200"
+                        height="250"
+                    />
+                </ResponsiveImage>
                 <Paragraph medium>{t("banner.welcome_message")}</Paragraph>
-
                 <BannerTitle>Jilver Pacheco</BannerTitle>
                 <Professions />
-                {/* <SocialLinks /> */}
+                <SocialLinks />
                 <BannerButton
                     to="about"
                     spy={true}
