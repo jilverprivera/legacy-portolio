@@ -5,7 +5,7 @@ import Image from "next/image";
 import Profile from "../../../assets/profile.webp";
 // <--- COMPONENTS --->
 import Professions from "./professions";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "./socialLinks";
 
 // <--- STYLES --->
 import { Container, ContentFlex } from "../../styles/global.style";
