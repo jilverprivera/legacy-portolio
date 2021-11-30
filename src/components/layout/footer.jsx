@@ -1,5 +1,6 @@
 // <--- IMPORTANT --->
 import { networks } from "../../data";
+import LogoWhite from "../../../public/icon_white.svg";
 
 // <--- ICONS --->
 import { FaHeart } from "react-icons/fa";
@@ -35,7 +36,7 @@ const Footer = () => {
                     offset={0}
                     duration={1000}
                 >
-                    Jilver Pacheco
+                    <LogoWhite />
                 </LogoIcon>
                 <FooterDescription>
                     <FooterParagraph regular margin="0rem 1rem 0rem">

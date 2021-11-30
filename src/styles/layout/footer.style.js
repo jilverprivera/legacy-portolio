@@ -30,7 +30,12 @@ export const FooterWrapper = styled.div`
 
 export const LogoIcon = styled(Link)`
     font-size: ${SIZES.semiRegular};
-    color ${({ theme }) => theme.white};
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     @media (max-width: 768px) {
         display: none;
     }
