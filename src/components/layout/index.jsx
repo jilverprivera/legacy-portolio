@@ -6,11 +6,11 @@ import { ThemeProvider } from "styled-components";
 import { AppContext } from "../../context/AppContext";
 // <--- COMPONENTS --->
 import Head from "./Head";
-import Header from "./Header";
+import Header from "./header";
 import Navigation from "./Navigation";
-import Language from "./Language";
+import Language from "./language";
 import Networks from "./Networks";
-import Footer from "./Footer";
+import Footer from "./footer";
 // <--- STYLES --->
 import { Main } from "./styles";
 import theme from "../../theme";
