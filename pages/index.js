@@ -1,40 +1,41 @@
-import { useContext, useMemo } from "react";
+import { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import dynamic from "next/dynamic";
-
 // <--- IMPORTANT --->
 import { AppContext } from "../src/context/AppContext";
 import Seo from "../src/seo";
-
 // <--- COMPONENTS --->
 import Layout from "../src/components/layout";
-import Services from "../src/components/home/services";
-import Banner from "../src/components/home/banner";
-import Featured from "../src/components/home/featured";
+import Home from "../src/components/home/Home";
+import Introduction from "../src/components/introduction";
+import Skills from "../src/components/skills";
+import Featured from "../src/components/home/Featured";
+import Contact from "../src/components/contact";
+// <--- HOOKS --->
+import { useSkew } from "../src/hooks/useSkew";
+import EducationExperience from "../src/components/educationExperience";
 
-import LoaderMap from "../src/components/contact/loaderMap";
+const HomePage = () => {
+  const { language } = useContext(AppContext);
+  const { currentLanguage } = language;
 
-const Home = () => {
-  const {
-    language: { currentLanguage },
-  } = useContext(AppContext);
-  const [t] = useTranslation("global");
+  const [t] = useTranslation("home");
+  const { scrollContainer } = useSkew();
 
-  const Map = dynamic(() => import("../src/components/contact/map"), {
-    loading: () => <LoaderMap />,
-    ssr: false,
-  });
   return (
     <>
       <Seo lang={currentLanguage} title={t("web-title")} />
       <Layout>
-        <Banner />
-        <Services />
-        <Featured />
-        {/* <Map /> */}
+        <div ref={scrollContainer}>
+          <Home />
+          <Introduction />
+          <Skills />
+          <EducationExperience />
+          <Featured />
+          <Contact />
+        </div>
       </Layout>
     </>
   );
 };
 
-export default Home;
+export default HomePage;

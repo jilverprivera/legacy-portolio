@@ -1,0 +1,25 @@
+{
+    "web-title": "Jilver Pacheco | Desarrollador Frontend e Ingeniero Electrónico",
+    "banner":{
+        "welcome_message": "Hola, soy",
+        "button": "Leer más"
+    },
+    "services": {
+        "title": "Servicios",
+        "message": "Mi misión es desarrollar soluciones a problemas complejos.",
+        "data": [
+            {
+               "id":"Frontend",
+               "name": "Desarrollo Frontend"
+            },
+            { 
+               "id":"Backend",
+               "name": "Desarrollo Backend"
+            },
+            { 
+                "id":"Mobile", 
+                "name": "Desarrollo Móvil"
+            }
+        ]
+    }
+}

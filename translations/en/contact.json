@@ -6,9 +6,12 @@
     },
     "form":{
         "name": "Name",
+        "subject": "Subject",
         "email": "Email",
         "message": "Message", 
         "button": "Send"
+    },
+    "map": {
+        "loading": "Wait, map is loading..."
     }
-
 }

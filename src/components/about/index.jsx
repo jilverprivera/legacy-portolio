@@ -1,31 +1,31 @@
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
+import Profile from "../../../assets/profile.webp";
 // <--- COMPONENTS --->
-import Introduction from "./introduction";
-import Skills from "./skills";
-import Education from "./education";
-import Experience from "./experience";
+import Introduction from "../introduction";
 
 // <--- STYLES --->
-import { Container, ContentGrid } from "../../styles/global.style";
-import { Title } from "../../styles/typography";
+import { Container } from "../../styles/global.style";
+import Skills from "../skills";
 
-const About = () => {
-    const [t] = useTranslation("about");
-    return (
-        <Container id="about" paddingtop>
-            <Title center content={t("introduction.before-title")}>
-                {t("introduction.title")}
-            </Title>
-            <Introduction />
-            <Skills />
-            
-            <ContentGrid width100>
-                <Education />
-                <Experience />
-            </ContentGrid>
-        </Container>
-    );
+const AboutComponent = () => {
+  const [t] = useTranslation("about");
+  return (
+    <Container id="about">
+      <Introduction />
+      <Skills />
+      {/* <SkillContainer>
+        <Skills />
+      </SkillContainer>
+      <Wrapper>
+        <GridContainer>
+          <Education />
+          <Experience />
+        </GridContainer>
+      </Wrapper> */}
+    </Container>
+  );
 };
 
-export default About;
+export default AboutComponent;

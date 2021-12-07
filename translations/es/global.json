@@ -7,8 +7,8 @@
         "portfolio-link": "Portafolio",
         "contact-link": "Contacto"
     },
-    "banner": {
-        "welcome_message": "Hola, soy",
-        "button": "Ver más"
+    "footer":{
+        "first": "Hecho con",
+        "second": "por @Jilverprivera"
     }
 }

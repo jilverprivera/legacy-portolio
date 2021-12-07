@@ -11,11 +11,12 @@ const GLOBAL = createGlobalStyle`
         margin: 0rem;
         padding: 0rem;
         box-sizing: inherit;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Inter', sans-serif;
     }
     body {
         background-color:  ${({ theme }) => theme.white};
         transition: white-color 0.4s;
+        overscroll-behavior-y: none;
     }
       .active{
         font-weight: 700;
@@ -29,6 +30,13 @@ const GLOBAL = createGlobalStyle`
 
    .responsive__banner-image{
        border-radius: 2rem;
+   }
+
+   .skill-icon{
+       width: 7rem;
+       height: 7rem;
+       margin: 2rem;
+
    }
 `;
 

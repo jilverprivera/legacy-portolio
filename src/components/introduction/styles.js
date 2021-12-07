@@ -41,8 +41,9 @@ export const ImageContainer = styled.div`
   height: 100%;
   margin: 8rem auto 0rem;
 
+
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 //   border: 1px solid #000;
   .image {

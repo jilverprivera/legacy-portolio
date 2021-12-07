@@ -8,9 +8,12 @@
     },
     "form":{
         "name": "Nombre",
+        "subject": "Asunto",
         "email": "Correo",
         "message": "Contenido",
         "button": "Enviar"
+    },
+    "map": {
+        "loading": "Espera, el mapa esta cargando..."
     }
-
 }

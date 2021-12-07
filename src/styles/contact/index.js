@@ -9,7 +9,7 @@ export const InformationContent = styled.div`
     flex-direction: column;
 `;
 
-export const FormContent = styled.form`
+export const FormContent = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@ export const FormContent = styled.form`
     flex-direction: column;
 `;
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
 position: relative;
     width: 80%;
     padding: 2rem 0rem;
@@ -64,7 +64,7 @@ export const TextArea = styled.textarea`
     width: 90%;
     height: 20rem;
     padding: 1rem;
-    margin: 0.5rem 2rem;
+    margin: 0.5rem 2rem 1rem;
     border: none;
     border-radius: 0.5rem;
     letter-spacing: 0.1rem;

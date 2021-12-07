@@ -9,7 +9,7 @@ export const HeaderContainer = styled(motion.header)`
   position: fixed;
   top: 0rem;
   left: 0rem;
-  z-index: 100;
+  z-index: 10000000;
   max-width: 100vw;
   width: 100%;
   transition: all 0.4s;

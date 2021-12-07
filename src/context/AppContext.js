@@ -4,36 +4,40 @@ import { useSSR } from "../hooks/useSSR";
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-    const [currentLanguage, setCurrentLanguage] = useState("es");
+  const [isHome, setIsHome] = useState(false);
+  // <---LANGUAGE --->
+  const [currentLanguage, setCurrentLanguage] = useState("es");
 
-    const [navbarActive, setNavbarActive] = useState(false);
-    const [openDrawer, setOpenDrawer] = useState(false);
+  // <---NAVBAR --->
+  const [navbarActive, setNavbarActive] = useState(false);
 
-    const [openSettings, setOpenSettings] = useState(false);
-    const [darkTheme, setDarkTheme] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  // <---CONTACT--->
+  const [sendingForm, setSendingForm] = useState(false);
+  const [successForm, setSuccessForm] = useState(false);
 
-    const { isRendering } = useSSR();
+  // <---HOOKS--->
+  const { isRendering } = useSSR();
 
-    useEffect(() => {
-        isRendering &&
-            (window.onscroll = () => {
-                if (window.pageYOffset >= 80) {
-                    setNavbarActive(true);
-                } else {
-                    setNavbarActive(false);
-                }
-            });
-    }, [isRendering]);
+  useEffect(() => {
+    isRendering &&
+      (window.onscroll = () => {
+        if (window.pageYOffset >= 80) {
+          setNavbarActive(true);
+        } else {
+          setNavbarActive(false);
+        }
+      });
+  }, [isRendering]);
 
-    const appState = {
-        theme: { darkTheme, setDarkTheme },
-        drawer: { openDrawer, setOpenDrawer },
-        language: { currentLanguage, setCurrentLanguage },
-        settings: { openSettings, setOpenSettings },
-        navbarActive,
-    };
+  const appState = {
+    home: { isHome, setIsHome },
+    menu: { openMenu, setOpenMenu },
+    language: { currentLanguage, setCurrentLanguage },
+    contact: { sendingForm, setSendingForm, successForm, setSuccessForm },
 
-    return (
-        <AppContext.Provider value={appState}>{children}</AppContext.Provider>
-    );
+    navbarActive,
+  };
+
+  return <AppContext.Provider value={appState}>{children}</AppContext.Provider>;
 };
