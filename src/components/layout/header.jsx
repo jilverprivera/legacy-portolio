@@ -1,53 +1,40 @@
 import { useContext } from "react";
-import { AnimatePresence } from "framer-motion";
-
 // <--- IMPORTANT --->
 import { AppContext } from "../../context/AppContext";
-
 import Logo from "../../../public/icon.svg";
-
-// <--- COMPONENTS --->
-import Drawer from "./drawer";
-
 // <--- STYLES --->
 import {
-    HeaderContent,
-    HeaderContainer,
-    HamburgerMenu,
-    MenuContent,
-    ContentHeader,
-    LogoContainer,
-} from "../../styles/layout/header.style";
+  HeaderWrapper,
+  HeaderContainer,
+  Hamburger,
+  HamburgerContent,
+  ContentHeader,
+  LogoContent,
+} from "./styles";
 
 const Header = () => {
-    const { drawer, navbarActive } = useContext(AppContext);
-    const { openDrawer, setOpenDrawer } = drawer;
+  const { menu, home, navbarActive } = useContext(AppContext);
+  const { openMenu, setOpenMenu } = menu;
+  const { isHome } = home;
 
-    return (
-        <HeaderContainer
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            height={navbarActive ? "6rem" : "7rem"}
-            blur={navbarActive ? "1rem" : null}
-            onShadow={navbarActive ? "0rem 0.2rem 1rem rgba(0,0,0,0.1)" : null}
-        >
-            <HeaderContent>
-                <LogoContainer>
-                    <Logo />
-                </LogoContainer>
-                <ContentHeader>
-                    <MenuContent onClick={() => setOpenDrawer(!openDrawer)}>
-                        <HamburgerMenu open={openDrawer} />
-                    </MenuContent>
-                </ContentHeader>
-            </HeaderContent>
-            <AnimatePresence exitBeforeEnter>
-                {openDrawer && <Drawer />}
-            </AnimatePresence>
-        </HeaderContainer>
-    );
+  return (
+    <HeaderContainer
+      height={navbarActive ? "6rem" : "7rem"}
+      blur={navbarActive ? "1rem" : null}
+      shadow={navbarActive ? "0rem 0.2rem 1rem rgba(0,0,0,0.1)" : null}
+    >
+      <HeaderWrapper>
+        <LogoContent>
+          <Logo />
+        </LogoContent>
+        <ContentHeader>
+          <HamburgerContent onClick={() => setOpenMenu(!openMenu)}>
+            <Hamburger background={isHome} open={openMenu} />
+          </HamburgerContent>
+        </ContentHeader>
+      </HeaderWrapper>
+    </HeaderContainer>
+  );
 };
 
 export default Header;

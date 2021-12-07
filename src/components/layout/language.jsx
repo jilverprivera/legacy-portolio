@@ -1,6 +1,5 @@
 // <--- IMPORTANT --->
 import { useWebTranslation } from "../../hooks/useWebTranslation";
-
 // <--- STYLES --->
 import { LanguageToggler } from "../../styles/layout/main.style";
 
