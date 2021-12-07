@@ -17,7 +17,7 @@ const Contact = () => {
     <Container id="contact">
       <Title>{t("contact.title")}</Title>
       <InformationContent>
-        <Paragraph regular>{t("contact.message")}</Paragraph>
+        {/* <Paragraph regular>{t("contact.message")}</Paragraph> */}
       </InformationContent>
       <GridContainer width100>
         <FormContent>
