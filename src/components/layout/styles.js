@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 import { SIZES } from "../../constants";
@@ -56,8 +56,7 @@ export const Hamburger = styled.span`
     width: 3rem;
     height: ${({ open }) => (open ? "0rem" : "0.4rem")};
     border-radius: 0.5rem;
-    background-color: ${({ background, theme }) =>
-      background ? theme.black : theme.white};
+    background-color: ${({ theme }) => theme.black};
     transition: 0.2s;
     &::before {
         position: absolute;
@@ -65,8 +64,8 @@ export const Hamburger = styled.span`
         width: 3rem;
         height: 0.4rem;
         border-radius: 0.5rem;
-        background-color: ${({ background, theme }) =>
-          background ? theme.black : theme.white};
+        background-color: ${({ theme }) => theme.black};
+
         transform: ${({ open }) =>
           open ? "translateY(0rem) rotate(45deg)" : "translateY(1rem);"};
         transition: 0.4s;
@@ -77,8 +76,8 @@ export const Hamburger = styled.span`
         width: 3rem;
         height: 0.4rem;
         border-radius: 0.5rem;
-        background-color: ${({ background, theme }) =>
-          background ? theme.black : theme.white};
+        background-color: ${({ theme }) => theme.black};
+
         transform: ${({ open }) =>
           open ? "translateY(0rem) rotate(-45deg)" : "translateY(-1rem);"};
         transition: 0.4s;
@@ -112,18 +111,40 @@ export const RightPanel = styled(motion.div)`
 `;
 
 // <------------------------- NAVIGATION ------------------------->
-export const NavContainer = styled(motion.div)`
+export const NavBackdrop = styled(motion.div)`
   position: fixed;
   top: 0rem;
   left: 0rem;
   width: 100%;
   height: 100vh;
-  background-color: ${({ theme }) => theme.white};
-  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  @media (max-width: 768px) {
+    background-color: rgba(0, 0, 0, 0);
+  }
+`;
+
+export const NavContainer = styled(motion.div)`
+  background-color: ${({theme}) => theme.white};
+  width: 100%;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
+`;
+
+export const NavWrapper = styled.div`
+  width: 90%;
+  max-width: 130rem;
+  margin: 3rem auto 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 `;
 export const NavList = styled(motion.ul)`
   overflow: hidden;
@@ -133,28 +154,30 @@ export const NavItemContent = styled(motion.li)`
   display: flex;
   overflow: hidden;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   &:hover {
     cursor: pointer;
   }
 `;
 export const NavLink = styled(Link)`
   text-decoration: none;
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   font-size: ${SIZES.large};
-  color: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.white};
   &:hover {
     cursor: pointer;
   }
 `;
 export const NavText = styled(motion.span)`
   display: block;
-  font-size: 3rem;
+  font-size: ${SIZES.medium};
   texte-decoration: none;
   overflow: hidden;
+  color: ${({ theme }) => theme.black};
+
   &:hover {
     cursor: pointer;
   }
@@ -171,7 +194,7 @@ export const Main = styled(motion.main)`
 export const FooterContainer = styled.footer`
   width: 100%;
   height: 6rem;
-  background-color: ${({ theme }) => theme.black};
+  //   background-color: ${({ theme }) => theme.black};
   @media (max-width: 768px) {
     height: 10rem;
   }
@@ -228,11 +251,11 @@ export const IconParagraph = styled.span`
 
 // <------------------------- LANGUAGE ------------------------->
 export const LanguageToggler = styled(motion.button)`
-  position: fixed;
-  bottom: 3rem;
-  left: 1rem;
-  width: 5rem;
-  height: 5rem;
+//   position: fixed;
+//   bottom: 3rem;
+//   left: 1rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
   border: none;
   outline: noner;
@@ -245,39 +268,39 @@ export const LanguageToggler = styled(motion.button)`
 
 // <------------------------- NETWORKS ------------------------->
 export const NetworksContainer = styled.div`
-    position: fixed;
-    top: 50%;
-    left: 2rem;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    &::before {
-        content: "";
-        width: 0.2rem;
-        height: 15rem;
-        background-color: ${({ theme }) => theme.black};
-    }
-    &::after {
-        content: "";
-        width: 0.2rem;
-        height: 15rem;
-        background-color: ${({ theme }) => theme.black};
-    }
-    @media (max-width: 768px) {
-        display: none;
-    }
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &::before {
+    content: "";
+    width: 0.2rem;
+    height: 15rem;
+    background-color: ${({ theme }) => theme.black};
+  }
+  &::after {
+    content: "";
+    width: 0.2rem;
+    height: 15rem;
+    background-color: ${({ theme }) => theme.black};
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NetworkLink = styled(motion.a)`
-    font-size: ${SIZES.medium};
-    color: ${({ theme }) => theme.black};
-    margin: 0.5rem 0rem;
-    &:first-child {
-        margin-top: 1rem;
-    }
-    &:last-child {
-        margin-bottom: 1rem;
-    }
+  font-size: ${SIZES.medium};
+  color: ${({ theme }) => theme.black};
+  margin: 0.5rem 0rem;
+  &:first-child {
+    margin-top: 1rem;
+  }
+  &:last-child {
+    margin-bottom: 1rem;
+  }
 `;

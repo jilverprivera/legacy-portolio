@@ -13,9 +13,8 @@ import {
 } from "./styles";
 
 const Header = () => {
-  const { menu, home, navbarActive } = useContext(AppContext);
+  const { menu, navbarActive } = useContext(AppContext);
   const { openMenu, setOpenMenu } = menu;
-  const { isHome } = home;
 
   return (
     <HeaderContainer
@@ -29,7 +28,7 @@ const Header = () => {
         </LogoContent>
         <ContentHeader>
           <HamburgerContent onClick={() => setOpenMenu(!openMenu)}>
-            <Hamburger background={isHome} open={openMenu} />
+            <Hamburger open={openMenu} />
           </HamburgerContent>
         </ContentHeader>
       </HeaderWrapper>

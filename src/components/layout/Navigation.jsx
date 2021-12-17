@@ -5,10 +5,14 @@ import { AnimatePresence } from "framer-motion";
 import { AppContext } from "../../context/AppContext";
 // <--- COMPONENTS --->
 import NavItem from "./NavItem";
+import Language from "./language";
 // <--- STYLES --->
-import { NavContainer, NavList } from "./styles";
+import { NavBackdrop, NavContainer, NavList, NavWrapper } from "./styles";
 // <--- VARIANTS --->
-import { NavigationVariants } from "../../constants/VARIANTS";
+import {
+  NavigationVariants,
+  NavigationWrapper,
+} from "../../constants/VARIANTS";
 
 const Navigation = () => {
   const { menu } = useContext(AppContext);
@@ -19,19 +23,33 @@ const Navigation = () => {
     <AnimatePresence exitBeforeEnter initial={false}>
       {openMenu && (
         <>
-          <NavContainer
+          <NavBackdrop
             variants={NavigationVariants}
             initial="initial"
             animate="animate"
             exit="exit"
           >
-            <NavList>
-              <NavItem name={t("header.home-link")} path={`/`} />
-              <NavItem name={t("header.about-link")} path={`/about`} />
-              <NavItem name={t("header.portfolio-link")} path={`/portfolio`} />
-              <NavItem name={t("header.contact-link")} path={`/contact`} />
-            </NavList>
-          </NavContainer>
+            <NavContainer
+              variants={NavigationWrapper}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              <NavWrapper>
+                <NavList>
+                  <NavItem name={t("header.home-link")} path="home" />
+                  <NavItem name={t("header.skill-link")} path="skills" />
+                  <NavItem
+                    name={t("header.education-experience-link")}
+                    path="education-exp"
+                  />
+                  <NavItem name={t("header.portfolio-link")} path="portfolio" />
+                  <NavItem name={t("header.contact-link")} path="contact" />
+                </NavList>
+                <Language />
+              </NavWrapper>
+            </NavContainer>
+          </NavBackdrop>
         </>
       )}
     </AnimatePresence>
