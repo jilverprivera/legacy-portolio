@@ -1,24 +1,36 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import {
+  Circle,
+  FeatureGroup,
+  MapContainer,
+  Popup,
+  TileLayer,
+} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 const Map = () => {
+  const purpleOptions = { color: "#0E1821" };
+
+  const position = [7.080995945620949, -73.10293151224573];
   return (
     <MapContainer
-      center={[7.080002112217095, -73.10302073170489]}
-      zoom={16}
+      center={position}
+      zoom={15}
       scrollWheelZoom={false}
-      style={{ height: "100vh", width: "100%" }}
+      style={{ height: "100%", width: "100%" }}
     >
       <TileLayer
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[7.080002112217095, -73.10302073170489]}>
-        {/* <Popup>
+
+      <FeatureGroup pathOptions={purpleOptions}>
+        <Popup>
           Floridablanca, Santander <br />
           Colombia
-        </Popup> */}
-      </Marker>
+        </Popup>
+
+        <Circle center={position} radius={50} />
+      </FeatureGroup>
     </MapContainer>
   );
 };

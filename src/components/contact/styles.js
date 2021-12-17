@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+export const Wrapper = styled.section``;
+
 export const LoaderMapContent = styled.section`
   width: 100%;
   height: 100vh;
@@ -10,12 +12,13 @@ export const LoaderMapContent = styled.section`
   flex-direction: column;
 `;
 
-
 export const GridContainer = styled(motion.section)`
   position: relative;
-  max-width: 125rem;
-  width: 100%;
-  margin: auto;
+//   border: 1px solid #000;
+  width: 90%;
+  max-width: 130rem;
+  margin: 8rem auto 0rem;
+  place-items: center;
   display: grid;
   row-gap: 2rem;
   column-gap: 2rem;
