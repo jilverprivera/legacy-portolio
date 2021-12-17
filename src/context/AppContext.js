@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import { useSSR } from "../hooks/useSSR";
 
 export const AppContext = createContext();
@@ -15,6 +15,8 @@ export const AppProvider = ({ children }) => {
   // <---CONTACT--->
   const [sendingForm, setSendingForm] = useState(false);
   const [successForm, setSuccessForm] = useState(false);
+
+  const [currentProject, setCurrentProject] = useState("1");
 
   // <---HOOKS--->
   const { isRendering } = useSSR();
@@ -34,8 +36,8 @@ export const AppProvider = ({ children }) => {
     home: { isHome, setIsHome },
     menu: { openMenu, setOpenMenu },
     language: { currentLanguage, setCurrentLanguage },
+    project: { currentProject, setCurrentProject },
     contact: { sendingForm, setSendingForm, successForm, setSuccessForm },
-
     navbarActive,
   };
 
