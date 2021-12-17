@@ -1,4 +1,4 @@
-import { LocationTitle } from "../styles/global.style";
+import { LocationTitle } from "../styles";
 
 const Location = ({ location }) => {
   return <LocationTitle>{location}</LocationTitle>;
