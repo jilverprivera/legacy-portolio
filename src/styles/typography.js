@@ -1,25 +1,66 @@
 import styled, { css } from "styled-components";
 import { SIZES } from "../constants";
 
+// <---- HOME ---->
+export const WelcomeMessage = styled.p`
+  width: 100%;
+  color: ${({ theme }) => theme.black};
+  font-size: ${SIZES.medium};
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    text-align: center;
+  }
+`;
+export const ShortDescription = styled.p`
+  font-size: ${SIZES.large};
+  width: 100%;
+  font-weight: 500;
+  margin: 4rem 0rem;
+  color: ${({ theme }) => theme.black};
+  @media (max-width: 768px) {
+    margin: 2rem 0rem;
+    text-align: center;
+  }
+`;
+export const Description = styled.p`
+  width: 100%;
+  color: ${({ theme }) => theme.black};
+  line-height: 3rem;
+  font-size: ${SIZES.regular};
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
+
+// <---- PROJECTS ---->
+export const CurrentCategory = styled.h2`
+  color: ${({ theme }) => theme.black};
+  font-size: ${SIZES.small};
+  text-transform: uppercase;
+  font-weight: 600;
+`;
+export const CurrentName = styled.h2`
+  color: ${({ theme }) => theme.black};
+  margin: 1.5rem 0rem;
+  font-size: ${SIZES.medium};
+  font-weight: 600;
+`;
+
 export const Paragraph = styled.p`
   color: ${({ theme }) => theme.black};
-  line-height: 3.5rem;
+  line-height: 3rem;
+
   @media (max-width: 768px) {
     text-align: center;
   }
 
   //<---- SIZES ---->
-  ${({ extraSmall }) =>
-    extraSmall &&
-    css`
-      font-size: ${SIZES.extraSmall};
-    `}
   ${({ small }) =>
     small &&
     css`
       font-size: ${SIZES.small};
     `}
-    ${({ regular }) =>
+  ${({ regular }) =>
     regular &&
     css`
       font-size: ${SIZES.regular};
@@ -64,8 +105,8 @@ export const Title = styled.h2`
   margin-bottom: 3rem;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 0.5rem;
-  color: ${({ theme }) => theme.black};
+  letter-spacing: 0.25rem;
+  color: ${({ theme }) => theme.white};
   z-index: 1;
   text-transform: uppercase;
   width: 100%;

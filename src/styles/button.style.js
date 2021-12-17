@@ -4,7 +4,7 @@ import { SIZES } from "../constants";
 export const Button = styled.button`
     border: none;
     outline: none;
-    background-color ${(props) => props.theme.primary};
+    background-color ${({theme}) => theme.primary};
     color: ${(props) => props.theme.white};
     border-radius: 0.5rem;
     font-size: ${SIZES.regular};
