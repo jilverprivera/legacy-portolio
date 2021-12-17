@@ -6,16 +6,38 @@ export const LayoutVariants = {
 };
 
 export const NavigationVariants = {
-  initial: { opacity: 0 },
+  initial: {
+    opacity: 0,
+    height: 0,
+  },
   animate: {
     opacity: 1,
+    height: "100vh",
     transition: { duration: 0.5 },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.5 },
+    height: 0,
+    transition: { duration: 0.5, delay: 0.5 },
   },
 };
+
+export const NavigationWrapper = {
+    initial: {
+        opacity: 0,
+        height: 0,
+      },
+      animate: {
+        opacity: 1,
+        height: "50vh",
+        transition: { duration: 0.5, delay: 0.125},
+      },
+      exit: {
+        opacity: 0,
+        height: 0,
+        transition: { duration: 0.5 },
+      },
+}
 export const ContentVariants = {
   start: { height: "0rem" },
   visible: { height: "15rem" },
