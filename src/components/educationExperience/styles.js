@@ -4,12 +4,12 @@ import { SIZES } from "../../constants";
 
 export const GridContainer = styled(motion.section)`
   position: relative;
-  max-width: 125rem;
+  max-width: 130rem;
   width: 100%;
   margin: auto;
   display: grid;
-  row-gap: 2rem;
-  column-gap: 2rem;
+  row-gap: 5rem;
+  column-gap: 5rem;
   grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
   @media (max-width: 768px) {
     display: block;
@@ -20,6 +20,7 @@ export const GridContainer = styled(motion.section)`
 export const Wrapper = styled.section`
   width: 100%;
   max-width: 125rem;
+//   border: 1px solid #000;
   margin: 8rem auto 4rem;
   display: flex;
   align-items: flex-start;
@@ -27,7 +28,6 @@ export const Wrapper = styled.section`
   flex-direction: column;
 `;
 export const Content = styled(motion.section)`
-  margin: 3rem 0rem;
   width: 100%;
 `;
 
@@ -63,8 +63,8 @@ export const Line = styled.div`
 `;
 
 export const TimeLineContent = styled(motion.div)`
-  width: 28rem;
-  background ${({ theme }) => theme.white_auxiliar}};
+  width: 26rem;
+  background ${({ theme }) => theme.white}};
   padding: 1rem;
   margin: 1rem 0rem;
   position: relative;

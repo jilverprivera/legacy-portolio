@@ -11,7 +11,7 @@ export const TimeLine = () => {
     const [t] = useTranslation("about");
     return (
         <>
-            {t("education-experience.education.data", { returnObjects: true }).map((item, index) => (
+            {t("education.data", { returnObjects: true }).map((item, index) => (
                 <TimeLineContainer key={item.title}>
                     <Line />
                     <TimelineCard index={index} {...item} />

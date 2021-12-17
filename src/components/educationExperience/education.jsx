@@ -16,8 +16,8 @@ const Education = () => {
   const { animation } = useAnimate(inView, 20);
   const [t] = useTranslation("about");
   return (
-    <Content ref={ref} animation={animation}>
-      <Title>{t("education-experience.education.title")}</Title>
+    <Content >
+      <Title>{t("education.title")}</Title>
       <TimeLine />
     </Content>
   );

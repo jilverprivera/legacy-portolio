@@ -19,8 +19,8 @@ const Experience = () => {
 
   return (
     <Content ref={ref} animate={animation}>
-      <Title>{t("education-experience.experience.title")}</Title>
-      {t("education-experience.experience.data", { returnObjects: true }).map(
+      <Title>{t("experience.title")}</Title>
+      {t("experience.data", { returnObjects: true }).map(
         (item) => (
           <ExperienceCard key={item.id} {...item} />
         )
