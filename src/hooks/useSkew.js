@@ -42,5 +42,3 @@ export const useSkew = () => {
 
   return { skewScrolling, scrollContainer };
 };
-
-// Configs
