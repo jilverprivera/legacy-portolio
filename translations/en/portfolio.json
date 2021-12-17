@@ -1,5 +1,5 @@
 {
-    "featured":{
+    "portfolio":{
         "before-title": "Featured projects",
         "title": "My Works.",
         "data":[
@@ -25,7 +25,7 @@
                 "id": "2",
                 "category": "Web",
                 "featured": "Featured Project",
-                "slug": "green-pid",
+                "slug": "tech-ecommerce",
                 "name": "TechEcommerce",
                 "description":"Minimalist website for ecommerce with cart, jwt verification, and Paypal integration button.",
                 "year": "2021",
@@ -39,16 +39,11 @@
                     {"name": "React.JS"},
                     {"name": "Node.JS"}
                 ]
-            }
-        ]
-    },
-    "portfolio":{
-        
-        "title": "Other projects",
-        "data":[
+            },
             {
-                "id": "1",
+                "id": "3",
                 "category": "Mobile",
+                "slug": "movies-app",
                 "name": "MoviesApp",
                 "description":"Mobile application with a list of Pokemon, their information and search by name or ID.",
                 "year": "2021",
@@ -63,8 +58,9 @@
                 ]
             },
             {
-                "id": "2",
+                "id": "4",
                 "category": "Mobile",
+                "slug": "pokedex-app",
                 "name": "Pokedex",
                 "description":"You can view a list of Pokemon, view more details about them and search by name or ID.",
                 "year": "2021",
@@ -76,53 +72,6 @@
                     {"name": "TypeScript"},
                     {"name": "React Native"},
                     {"name": "TheMovieDB"}
-                ]
-            },
-            {
-                "id": "3",
-                "category": "Engineering",
-                "name": "Images face detection",
-                "description":"",
-                "year": "2021",
-                "url": "",
-                "android_url": "",
-                "ios_link": "",
-                "github_url": "",             
-                "technologies":[
-                    {"name": "Python"},
-                    {"name": "OpenCV"},
-                    {"name": "Keras"}
-                ]
-            },
-            {
-                "id": "4",
-                "category": "Web",
-                "name": "Coincrypto",
-                "description":"Version II of my first cryptocurrency website, you can change the type of currency in which you want to trade and you can also see a graph with the last 24 values.",
-                "year": "2021",
-                "url": "https://coincrypto.netlify.app/",             
-                "android_url": "",
-                "ios_link": "",
-                "github_url": "https://github.com/jilverprivera/Cryptocurrency-trader-v2",
-                "technologies":[
-                    {"name": "React"},
-                    {"name": "cryptocompare API"}
-                ]
-            },
-            {
-                "id": "5",
-                "category": "Desktop",
-                "name": "Electro-TECH",
-                "description":"Desktop application for electronic engineering students of the 'Universidad de Investigación y Desarrollo' in which there are topics related to various academic courses.",
-                "year": "2020",
-                "url": "",
-                "android_url": "",
-                "ios_link": "",
-                "github_url": "https://github.com/jilverprivera/Electron.JS-Electro-TECH",            
-                "technologies":[
-                    {"name": "JavaScript"},
-                    {"name": "Electron.JS"},
-                    {"name": "SCSS"}
                 ]
             }
         ]

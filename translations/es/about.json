@@ -17,48 +17,49 @@
         "title": "Tecnologías"
     },
     "education-experience": {
-        "section-title": "03 / Educación y Experiencia",
-        "education":{
-            "title": "Educación",
-            "data":[
-                {
-                    "title": "Ingeniero Electrónico",
-                    "academy": "Universidad de Investigación y Desarrollo",
-                    "location": "Bucaramanga, CO",
-                    "date": "Feb 2017 - Presente",
-                    "icon": "university",
-                    "background": "#9E9E9E"
-                },
-                {
-                    "title": "React & Jest",
-                    "academy": "UDEMY",
-                    "location": "Certificación online",
-                    "date": "2021",
-                    "icon": "react",
-                    "background": "#5ED3F3"
-                },
-                {
-                    "title": "React, MERN & Redux",
-                    "academy": "UDEMY",
-                    "location": "Certificación online",
-                    "date": "2021",
-                    "icon": "react",
-                    "background": "#5ED3F3"
-                }
-            ]
-        },
-        "experience":{
-            "title": "Experiencia",
-            "data": [
-                {
-                    "id": "1",
-                    "position": "Desarrollador Frontend Jr",
-                    "company": "DyCO Solutions",
-                    "location": "Bucaramanga, CO",
-                    "date": "Jul 2020 - Sep 2020",
-                    "description": "Diseñar una plataforma que permita la gestión de artistas a través de un gestor virtual aplicando tecnologías que permitan la escalabilidad y la integración de nuevas funcionalidades."
-                }
-            ]
-        }
+        "section-title": "03 / Educación y Experiencia"
+        
+    },
+    "education":{
+        "title": "Educación",
+        "data":[
+            {
+                "title": "Ingeniero Electrónico",
+                "academy": "Universidad de Investigación y Desarrollo",
+                "location": "Bucaramanga, CO",
+                "date": "Feb 2017 - Presente",
+                "icon": "university",
+                "background": "#9E9E9E"
+            },
+            {
+                "title": "React & Jest",
+                "academy": "UDEMY",
+                "location": "Certificación online",
+                "date": "2021",
+                "icon": "react",
+                "background": "#5ED3F3"
+            },
+            {
+                "title": "React, MERN & Redux",
+                "academy": "UDEMY",
+                "location": "Certificación online",
+                "date": "2021",
+                "icon": "react",
+                "background": "#5ED3F3"
+            }
+        ]
+    },
+    "experience":{
+        "title": "Experiencia",
+        "data": [
+            {
+                "id": "1",
+                "position": "Desarrollador Frontend Jr",
+                "company": "DyCO Solutions",
+                "location": "Bucaramanga, CO",
+                "date": "Jul 2020 - Sep 2020",
+                "description": "Diseñar una plataforma que permita la gestión de artistas a través de un gestor virtual aplicando tecnologías que permitan la escalabilidad y la integración de nuevas funcionalidades."
+            }
+        ]
     }
 }

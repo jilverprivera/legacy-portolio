@@ -1,9 +1,7 @@
 {
-    "contact":{
-        "title": "Contact",
-        "floating-message" : "Let's Connect!",
-        "message": "Feel free to send me a message here or in my social networks, no matter if you want to ask me about something, have a job offer, or just want to say hello, I will try to get back to you as soon as possible."
-    },
+
+    "title": "05 / Contact",
+    "message": "Feel free to send me a message here or in my social networks, no matter if you want to ask me about something, have a job offer, or just want to say hello, I will try to get back to you as soon as possible.",
     "form":{
         "name": "Name",
         "subject": "Subject",

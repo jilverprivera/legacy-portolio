@@ -1,11 +1,12 @@
 {
 
-    "web-title": "Jilver Pacheco | Desarrollador Frontend e Ingeniero Electrónico",
+    "web-title": "Jilver Pacheco | Desarrollador Web e Ingeniero Electrónico",
     "header":{
-        "home-link": "Inicio",
-        "about-link": "Sobre mí",
-        "portfolio-link": "Portafolio",
-        "contact-link": "Contacto"
+        "home-link": "01 Inicio",
+        "skill-link": "02 Habilidades",
+        "education-experience-link": "03 Educación y Experiencia",
+        "portfolio-link": "04 Portafolio",
+        "contact-link": "05 Contacto"
     },
     "footer":{
         "first": "Hecho con",

@@ -1,11 +1,6 @@
 {
-    "contact":{
-        "title": "Contacto",
-        "floating-message" : "¡Hablemos!",
-        "message": "Siéntete libre de dejarme un mensaje sea por aquí o en mis redes sociales, no importa si solo quieres preguntarme acerca de algo, tienes una oferta laboral o solo quieres saludar, intentaré responderte lo más pronto posible."
-
-    
-    },
+    "title": "05 / Contacto",
+    "message": "Siéntete libre de dejarme un mensaje sea por aquí o en mis redes sociales, no importa si solo quieres preguntarme acerca de algo, tienes una oferta laboral o solo quieres saludar, intentaré responderte lo más pronto posible.",
     "form":{
         "name": "Nombre",
         "subject": "Asunto",
