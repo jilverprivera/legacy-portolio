@@ -15,7 +15,7 @@ const Blog = ({ post }) => {
       </Head>
 
       <Layout>
-        <div>
+        <div style={{ marginTop: "10rem" }}>
           {post
             .sort((a, b) => a.date > b.date)
             .map((post) => (

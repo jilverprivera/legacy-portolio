@@ -7,11 +7,15 @@ import MDXBlogComponents from "../../components/MDX/blog/MDX";
 import { getFileBySlug, getFiles } from "../../lib/mdx";
 
 const Post = ({ source, frontmatter }) => {
+  const { title } = frontmatter;
+
   return (
     <>
-      <Head>
-        <title>Blog | {frontmatter.title}</title>
-      </Head>
+      {title && (
+        <Head>
+          <title>Blog | {title}</title>
+        </Head>
+      )}
       <BlogLayout>
         {/* <BlogHeader title={frontmatter.title} date={frontmatter.date} /> */}
         <MDXRemote {...source} components={MDXBlogComponents} />
