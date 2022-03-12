@@ -7,15 +7,8 @@ import MDXBlogComponents from "../../components/MDX/blog/MDX";
 import { getFileBySlug, getFiles } from "../../lib/mdx";
 
 const Post = ({ source, frontmatter }) => {
-  const { title } = frontmatter;
-
   return (
     <>
-      {title && (
-        <Head>
-          <title>Blog | {title}</title>
-        </Head>
-      )}
       <BlogLayout>
         {/* <BlogHeader title={frontmatter.title} date={frontmatter.date} /> */}
         <MDXRemote {...source} components={MDXBlogComponents} />
@@ -25,13 +18,6 @@ const Post = ({ source, frontmatter }) => {
 };
 
 export default Post;
-
-export async function getStaticProps({ params }) {
-  const { source, frontmatter } = await getFileBySlug("posts", params.slug);
-  return {
-    props: { source, frontmatter: { slug: params.slug, ...frontmatter } },
-  };
-}
 
 export async function getStaticPaths() {
   const post = await getFiles("posts");
@@ -43,5 +29,12 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: true, // false or 'blocking'
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { source, frontmatter } = await getFileBySlug("posts", params.slug);
+  return {
+    props: { source, frontmatter: { slug: params.slug, ...frontmatter } },
   };
 }

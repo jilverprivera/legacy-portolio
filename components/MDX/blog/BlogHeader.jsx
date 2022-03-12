@@ -11,8 +11,3 @@ const BlogHeader = ({ title, date }) => {
 };
 
 export default BlogHeader;
-
-BlogHeader.propTypes = {
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-};
