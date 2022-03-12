@@ -2,7 +2,8 @@ import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 
 import BlogLayout from "../../components/MDXComponents/blog/BlogLayout";
-import MDXBlogComponents from "../../components/MDXComponents/blog/MDXBlogComponents";
+import MDXBlogComponents from "../../components/MDX/blog/MDX";
+
 import { getFileBySlug, getFiles } from "../../lib/mdx";
 
 const Post = ({ source, frontmatter }) => {
