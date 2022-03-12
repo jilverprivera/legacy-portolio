@@ -1,8 +1,19 @@
 import { MDXRemote } from "next-mdx-remote";
+import Head from "next/head";
 import { getFileBySlug, getFiles } from "../../lib/mdx";
 
 const Post = ({ source, frontmatter }) => {
-  return <MDXRemote {...source} />;
+  return (
+    <>
+      <Head>
+        <title>Blog | {frontmatter.title}</title>
+      </Head>
+      <div>
+        {/* <BlogHeader title={frontmatter.title} date={frontmatter.date} /> */}
+        <MDXRemote {...source} />
+      </div>
+    </>
+  );
 };
 
 export default Post;
