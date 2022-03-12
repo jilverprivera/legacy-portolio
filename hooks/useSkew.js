@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useWindowSize } from "./useWindow";
+import { useWindow } from "./useWindow";
 
 const data = {
   ease: 0.1,
@@ -11,8 +11,7 @@ const data = {
 export const useSkew = () => {
   const scrollContainer = useRef();
 
-  const { windowSize } = useWindowSize();
-
+  const { windowSize } = useWindow();
 
   useEffect(() => {
     requestAnimationFrame(() => {
