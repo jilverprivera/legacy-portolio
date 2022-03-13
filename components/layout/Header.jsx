@@ -45,8 +45,8 @@ const Header = () => {
             </Link>
             {/* <Link href="/home" passHref> */}
             <Navigation
-              onMouseEnter={() => setOpenNavigation(true)}
-              onMouseLeave={() => setOpenNavigation(false)}
+              onClick={() => setOpenNavigation(!openNavigation)}
+              // onMouseLeave={() => setOpenNavigation(false)}
             >
               Discover
             </Navigation>
@@ -55,7 +55,12 @@ const Header = () => {
         </HeaderWrapper>
       </HeaderContainer>
 
-      {openNavigation && <Dropdown />}
+      {openNavigation && (
+        <Dropdown
+          openNavigation={openNavigation}
+          setOpenNavigation={setOpenNavigation}
+        />
+      )}
     </>
   );
 };

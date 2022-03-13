@@ -1,19 +1,15 @@
 import { MDXRemote } from "next-mdx-remote";
-import Head from "next/head";
 
-import BlogLayout from "../../components/MDX/blog/BlogHeader";
-import MDXBlogComponents from "../../components/MDX/blog/MDX";
+import BlogLayout from "../../layout/blog";
+import MDXComponents from "../../components/MDX/mdx";
 
 import { getFileBySlug, getFiles } from "../../lib/mdx";
 
 const Post = ({ source, frontmatter }) => {
   return (
-    <>
-      <BlogLayout>
-        {/* <BlogHeader title={frontmatter.title} date={frontmatter.date} /> */}
-        <MDXRemote {...source} components={MDXBlogComponents} />
-      </BlogLayout>
-    </>
+    <BlogLayout metadata={frontmatter}>
+      <MDXRemote {...source} components={MDXComponents} />
+    </BlogLayout>
   );
 };
 
@@ -28,13 +24,32 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
-    fallback: true, // false or 'blocking'
+    fallback: false, // false or 'blocking'
   };
 }
 
 export async function getStaticProps({ params }) {
   const { source, frontmatter } = await getFileBySlug("posts", params.slug);
   return {
-    props: { source, frontmatter: { slug: params.slug, ...frontmatter } },
+    props: {
+      source,
+      frontmatter: {
+        slug: params.slug,
+        ...frontmatter,
+      },
+    },
   };
 }
+
+// export async function getStaticPaths() {
+//   const projects = await getFiles("projects");
+//   const paths = projects.map((project) => ({
+//     params: {
+//       slug: project.replace(/\.mdx/, ""),
+//     },
+//   }));
+//   return {
+//     paths,
+//     fallback: true, // false or 'blocking'
+//   };
+// }

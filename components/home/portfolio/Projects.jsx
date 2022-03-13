@@ -20,7 +20,7 @@ import {
 
 const Projects = ({ projects }) => {
   return (
-    <GlobalContainer id="portfolio" bg>
+    <GlobalContainer id="portfolio">
       <GlobalFlexStartWrapper>
         <SectionTitle
           title="Portfolio"
