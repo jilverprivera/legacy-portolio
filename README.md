@@ -15,19 +15,19 @@ Personal website where you'll find information about me and things that I like t
 
 ### Overview 👀
 
-- `assets/*`
-- `components/*` - Fully components.
-- `constants/*` - Typography sizes, application light and dark theme.
+- `components/*` - Application components.
+- `constants/*` - Sizes and Theme.
 - `context/*` - Global states of the application.
-- `data/*` - MDX data (post, projects).
+- `data/*` - MDX data (post, projects) and json data.
+- `helpers/*` - Variants and networks data.
 - `hooks/*` - Custom hooks.
-- `layout/*` - Layout of each page with MDX Categories (blog, home, portfolio).
+- `layout/*` - Layout high order component.
 - `lib/*` - A helpful utilities for MDX components.
 - `pages/*` - All static pages.
 - `pages/blog/*` - Static pre-rendered blog pages using MDX.
 - `pages/portfolio/*` - Static pre-rendered project pages using MDX.
-- `public/*` - MDX Data (post, projects).
-- `styles/*` - Global components styles.
+- `public/*` - icons, resume, images.
+- `styles/*` - Styled components.
 
 ### Running on local 💻
 
@@ -39,5 +39,3 @@ Personal website where you'll find information about me and things that I like t
 ```
 
 ### Enjoy ✌
-
-If you want to copy or build on this project, of course you can do it but with a little attribution, I spent many hours making this UI design and the only thing I hope is that you do not attribute the code as your own, for everything else, feel free to make changes and improvements to it.
