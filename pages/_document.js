@@ -27,7 +27,6 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
-
   render() {
     return (
       <Html>
@@ -40,7 +39,7 @@ export default class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cairo+Web:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>

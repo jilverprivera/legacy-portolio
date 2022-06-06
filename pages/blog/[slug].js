@@ -1,15 +1,26 @@
 import { MDXRemote } from "next-mdx-remote";
 
-import BlogLayout from "../../layout/blog";
-import { MDXComponents } from "../../components/MDX/mdx";
+// import BlogLayout from "../../layout/blog";
+import { MDXComponents } from "../../components/mdx";
 
 import { getFileBySlug, getFiles } from "../../lib/mdx";
+import Layout from "../../layout";
+import { BlogHeader, Date, Tag, TagContent, Title } from "../../styles/blog";
 
 const Post = ({ source, frontmatter }) => {
   return (
-    <BlogLayout metadata={frontmatter}>
+    <Layout metadata={frontmatter} type="post">
+      <BlogHeader>
+        <Date>{frontmatter.date}</Date>
+        <Title>{frontmatter.title}</Title>
+        <TagContent>
+          {frontmatter.tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </TagContent>
+      </BlogHeader>
       <MDXRemote {...source} components={MDXComponents} />
-    </BlogLayout>
+    </Layout>
   );
 };
 

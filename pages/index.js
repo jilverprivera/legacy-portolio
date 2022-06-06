@@ -1,36 +1,37 @@
-import Head from "next/head";
-
 import { getAllFilesMetadata } from "../lib/mdx";
 
-import Layout from "../components/layout";
-import Banner from "../components/home/banner/Banner";
-import Projects from "../components/home/portfolio/Projects";
-import Blog from "../components/home/blog/Blog";
-import LocalNavigation from "../components/global/LocalNavigation";
+import Layout from "../layout";
+import Blog from "../components/Blog";
+import Portfolio from "../components/Portfolio";
 
-const title =
-  "Home | Jilver Pacheco - Software developer & Electronic engineer.";
+import { Container } from "../styles/layout";
+import Banner from "../components/Banner";
+import About from "../components/About";
 
-const navigation = [
-  { route: "home" },
-  { route: "portfolio" },
-  { route: "last-writings" },
-  { route: "contact" },
-];
-
-const HomePage = ({ projects }) => {
+const HomePage = ({ posts, projects }) => {
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <Layout>
-        <LocalNavigation arr={navigation} />
+    <Layout
+      metadata={{
+        title:
+          "Jilver Pacheco Rivera - Software Developer & Electronic Engineer.",
+      }}
+    >
+      <Container id="banner">
         <Banner />
-        <Projects projects={projects} />
-        <Blog />
-      </Layout>
-    </>
+      </Container>
+
+      <Container id="about">
+        <About />
+      </Container>
+
+      <Container id="portfolio">
+        <Portfolio projects={projects} />
+      </Container>
+
+      {/* <Container id="blog">
+        <Blog posts={posts} />
+      </Container> */}
+    </Layout>
   );
 };
 
@@ -38,11 +39,19 @@ export default HomePage;
 
 export async function getStaticProps() {
   const allProjects = await getAllFilesMetadata("projects");
+  const allPosts = await getAllFilesMetadata("posts");
+
   const projects = allProjects
     .sort((a, b) => a.date.localeCompare(b.date))
-    .reverse();
+    .reverse()
+    .slice(0, 6);
+
+  const posts = allPosts
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .reverse()
+    .slice(0, 4);
 
   return {
-    props: { projects },
+    props: { posts, projects },
   };
 }
