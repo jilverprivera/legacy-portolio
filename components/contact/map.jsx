@@ -8,8 +8,6 @@ import {
 import "leaflet/dist/leaflet.css";
 
 const Map = () => {
-  const purpleOptions = { color: "#0E1821" };
-
   const position = [7.080995945620949, -73.10293151224573];
   return (
     <MapContainer
@@ -23,7 +21,7 @@ const Map = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <FeatureGroup pathOptions={purpleOptions}>
+      <FeatureGroup pathOptions={{ color: `${({ theme }) => theme.primary}` }}>
         <Popup>
           Floridablanca, Santander <br />
           Colombia
@@ -31,11 +29,6 @@ const Map = () => {
 
         <Circle center={position} radius={20} />
       </FeatureGroup>
-      {/* <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker> */}
     </MapContainer>
   );
 };

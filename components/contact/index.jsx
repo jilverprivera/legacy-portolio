@@ -1,5 +1,5 @@
 import { Container } from "../../styles";
-import { Paragraph, Title } from "../../styles/typography";
+import { Paragraph } from "../../styles/typography";
 import { FormContent } from "../../styles/contact";
 import { Form } from "./form";
 import { useTranslation } from "react-i18next";
