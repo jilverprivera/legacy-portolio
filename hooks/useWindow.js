@@ -10,14 +10,18 @@ export const useWindow = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       setRendering(true);
+
       const handleResize = () => {
         setWindowSize({
           width: window.innerWidth,
           height: window.innerHeight,
         });
       };
+
       window.addEventListener("resize", handleResize);
+
       handleResize();
+
       return () => window.removeEventListener("resize", handleResize);
     } else {
       setRendering(false);
